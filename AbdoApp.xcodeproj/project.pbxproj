@@ -1,0 +1,323 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB23C7131E75FC420046E5DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB23C7121E75FC420046E5DF /* AppDelegate.swift */; };
+		CB23C7151E75FC420046E5DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB23C7141E75FC420046E5DF /* ViewController.swift */; };
+		CB23C7181E75FC420046E5DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB23C7161E75FC420046E5DF /* Main.storyboard */; };
+		CB23C71B1E75FC420046E5DF /* AbdoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB23C7191E75FC420046E5DF /* AbdoApp.xcdatamodeld */; };
+		CB23C71D1E75FC420046E5DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB23C71C1E75FC420046E5DF /* Assets.xcassets */; };
+		CB23C7201E75FC420046E5DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB23C71E1E75FC420046E5DF /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CB23C70F1E75FC420046E5DF /* AbdoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbdoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB23C7121E75FC420046E5DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CB23C7141E75FC420046E5DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CB23C7171E75FC420046E5DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CB23C71A1E75FC420046E5DF /* AbdoApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AbdoApp.xcdatamodel; sourceTree = "<group>"; };
+		CB23C71C1E75FC420046E5DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CB23C71F1E75FC420046E5DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CB23C7211E75FC420046E5DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB23C70C1E75FC420046E5DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB23C7061E75FC420046E5DF = {
+			isa = PBXGroup;
+			children = (
+				CB23C7111E75FC420046E5DF /* AbdoApp */,
+				CB23C7101E75FC420046E5DF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB23C7101E75FC420046E5DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB23C70F1E75FC420046E5DF /* AbdoApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB23C7111E75FC420046E5DF /* AbdoApp */ = {
+			isa = PBXGroup;
+			children = (
+				CB23C7121E75FC420046E5DF /* AppDelegate.swift */,
+				CB23C7141E75FC420046E5DF /* ViewController.swift */,
+				CB23C7161E75FC420046E5DF /* Main.storyboard */,
+				CB23C71C1E75FC420046E5DF /* Assets.xcassets */,
+				CB23C71E1E75FC420046E5DF /* LaunchScreen.storyboard */,
+				CB23C7211E75FC420046E5DF /* Info.plist */,
+				CB23C7191E75FC420046E5DF /* AbdoApp.xcdatamodeld */,
+			);
+			path = AbdoApp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB23C70E1E75FC420046E5DF /* AbdoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB23C7241E75FC420046E5DF /* Build configuration list for PBXNativeTarget "AbdoApp" */;
+			buildPhases = (
+				CB23C70B1E75FC420046E5DF /* Sources */,
+				CB23C70C1E75FC420046E5DF /* Frameworks */,
+				CB23C70D1E75FC420046E5DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AbdoApp;
+			productName = AbdoApp;
+			productReference = CB23C70F1E75FC420046E5DF /* AbdoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB23C7071E75FC420046E5DF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = GOD;
+				TargetAttributes = {
+					CB23C70E1E75FC420046E5DF = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CB23C70A1E75FC420046E5DF /* Build configuration list for PBXProject "AbdoApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB23C7061E75FC420046E5DF;
+			productRefGroup = CB23C7101E75FC420046E5DF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB23C70E1E75FC420046E5DF /* AbdoApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB23C70D1E75FC420046E5DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB23C7201E75FC420046E5DF /* LaunchScreen.storyboard in Resources */,
+				CB23C71D1E75FC420046E5DF /* Assets.xcassets in Resources */,
+				CB23C7181E75FC420046E5DF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB23C70B1E75FC420046E5DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB23C7151E75FC420046E5DF /* ViewController.swift in Sources */,
+				CB23C71B1E75FC420046E5DF /* AbdoApp.xcdatamodeld in Sources */,
+				CB23C7131E75FC420046E5DF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CB23C7161E75FC420046E5DF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB23C7171E75FC420046E5DF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CB23C71E1E75FC420046E5DF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB23C71F1E75FC420046E5DF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB23C7221E75FC420046E5DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CB23C7231E75FC420046E5DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB23C7251E75FC420046E5DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AbdoApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Heaven.AbdoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CB23C7261E75FC420046E5DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AbdoApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Heaven.AbdoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB23C70A1E75FC420046E5DF /* Build configuration list for PBXProject "AbdoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB23C7221E75FC420046E5DF /* Debug */,
+				CB23C7231E75FC420046E5DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB23C7241E75FC420046E5DF /* Build configuration list for PBXNativeTarget "AbdoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB23C7251E75FC420046E5DF /* Debug */,
+				CB23C7261E75FC420046E5DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CB23C7191E75FC420046E5DF /* AbdoApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CB23C71A1E75FC420046E5DF /* AbdoApp.xcdatamodel */,
+			);
+			currentVersion = CB23C71A1E75FC420046E5DF /* AbdoApp.xcdatamodel */;
+			path = AbdoApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CB23C7071E75FC420046E5DF /* Project object */;
+}
