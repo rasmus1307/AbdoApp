@@ -1,5 +1,5 @@
 //
-//  Supplement.swift
+//  Allergy.swift
 //  ABDO
 //
 //  Created by GOD on 12/03/2017.
@@ -8,26 +8,29 @@
 
 import Foundation
 
-public class Supplement
+public class ChildAllergy
 {
     var id : Int
-    var type : String
+    var childId : Int
+    var allergyId : Int
     var createdTime : NSDate
     var modifiedTime : NSDate
-    
+
     required public init()
     {
         self.id = 0
-        self.type = ""
+        self.childId = 0
+        self.allergyId = ""
         self.createdTime = NSDate()
         self.modifiedTime = NSDate()
     }
     
-    convenience public init(id : Int?, type : String?, createdTime : NSDate?, modifiedTime : NSDate?)
+    convenience public init(id : Int?, childId : Int?, allergyId : Int?, createdTime : NSDate?, modifiedTime : NSDate?)
     {
         self.init()
         self.id = id ?? 0
-        self.type = type ?? ""
+        self.childId = childId ?? 0
+        self.allergyId = allergyId ?? ""
         self.createdTime = createdTime ?? NSDate()
         self.modifiedTime = modifiedTime ?? NSDate()
     }

@@ -7,6 +7,8 @@
 //
 
 import XCTest
+import Alamofire
+import SwiftyJSON
 @testable import AbdoApp
 
 class AbdoAppTests: XCTestCase {
@@ -40,5 +42,32 @@ class AbdoAppTests: XCTestCase {
         myTestingChild.shareCode.CreateShareCode()
         API().shareCode.Set(child: myTestingChild)
         print("testing finnished")
+    }
+    
+    func testApi()
+    {
+        Alamofire.request("http://abdoapi.azurewebsites.net/api/values").responseJSON { response in
+            let json = JSON(response.result)
+            print("JSON: \(json)")
+        }
+    }
+    
+    func testAlamofireGet()
+    {
+        let urlString = "http://abdoapi.azurewebsites.net/api/values/"
+        
+        // When
+        let request = Alamofire.request(urlString)
+        
+        // Then
+        XCTAssertNotNil(request.request)
+        XCTAssertEqual(request.request?.httpMethod, "GET")
+        XCTAssertEqual(request.request?.url?.absoluteString, urlString)
+        XCTAssertNil(request.response)
+    }
+    
+    func testRegistration()
+    {
+        
     }
 }

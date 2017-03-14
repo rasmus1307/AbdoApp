@@ -15,30 +15,30 @@ import Foundation
 /// ## API
 /// The API can be called through the API
 
-class ChildInfo
+public class ChildInfo
 {
-    var createTimestamp: NSDate
-    var updateTimestamp: NSDate
-    var name: String
-    var isFemale: Bool
-    var birthdate: NSDate
+    var name : String
+    var isFemale : Bool
+    var birthdate : NSDate
+    var createdTime : NSDate
+    var modifiedTime : NSDate
     
-    required init()
+    public required init()
     {
-        self.createTimestamp = NSDate()
-        self.updateTimestamp = NSDate()
         self.name = ""
         self.isFemale = true
         self.birthdate = NSDate.minimumDate()
+        self.createdTime = NSDate()
+        self.modifiedTime = NSDate()
     }
     
-    convenience init(createTimestamp: NSDate?, updateTimestamp: NSDate?, name: String?, isFemale: Bool?, birthdate: NSDate?)
+    public convenience init(name: String?, isFemale: Bool?, birthdate: NSDate?, createdTime: NSDate?, modifiedTime: NSDate?)
     {
         self.init()
-        self.createTimestamp = createTimestamp ?? NSDate.minimumDate()
-        self.updateTimestamp = updateTimestamp ?? NSDate.minimumDate()
         self.name = name ?? ""
         self.isFemale = isFemale ?? true
         self.birthdate = birthdate ?? NSDate.minimumDate()
+        self.createdTime = createdTime ?? NSDate()
+        self.modifiedTime = modifiedTime ?? NSDate()
     }
 }

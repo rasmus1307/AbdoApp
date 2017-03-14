@@ -19,15 +19,15 @@
 		CB6D5D2C1E75FFDB00D36853 /* ShareCodeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D5D2A1E75FFDB00D36853 /* ShareCodeAPI.swift */; };
 		CB6D5D2F1E76000400D36853 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D5D2E1E76000400D36853 /* NSDateExtension.swift */; };
 		CB6D5D331E76004000D36853 /* Anonymous.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D5D321E76004000D36853 /* Anonymous.swift */; };
-		CB6D5D3C1E76006400D36853 /* Allergy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D5D351E76006400D36853 /* Allergy.swift */; };
+		CB6D5D3C1E76006400D36853 /* ChildAllergy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D5D351E76006400D36853 /* ChildAllergy.swift */; };
 		CB6D5D3D1E76006400D36853 /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D5D361E76006400D36853 /* Child.swift */; };
 		CB6D5D3E1E76006400D36853 /* ChildInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D5D371E76006400D36853 /* ChildInfo.swift */; };
-		CB6D5D3F1E76006400D36853 /* Medicin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D5D381E76006400D36853 /* Medicin.swift */; };
+		CB6D5D3F1E76006400D36853 /* ChildMedicin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D5D381E76006400D36853 /* ChildMedicin.swift */; };
 		CB6D5D401E76006400D36853 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D5D391E76006400D36853 /* Registration.swift */; };
 		CB6D5D411E76006400D36853 /* ShareCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D5D3A1E76006400D36853 /* ShareCode.swift */; };
 		CB6D5D421E76006400D36853 /* Supplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D5D3B1E76006400D36853 /* Supplement.swift */; };
-		CB6D5D471E76008000D36853 /* AllergyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D5D451E76008000D36853 /* AllergyType.swift */; };
-		CB6D5D481E76008000D36853 /* SupplementType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D5D461E76008000D36853 /* SupplementType.swift */; };
+		CB6D5D471E76008000D36853 /* Allergy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D5D451E76008000D36853 /* Allergy.swift */; };
+		CB6D5D481E76008000D36853 /* ChildSupplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D5D461E76008000D36853 /* ChildSupplement.swift */; };
 		CB6D5D4F1E7600AA00D36853 /* ActivityLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D5D4A1E7600AA00D36853 /* ActivityLevel.swift */; };
 		CB6D5D501E7600AA00D36853 /* FecesType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D5D4B1E7600AA00D36853 /* FecesType.swift */; };
 		CB6D5D511E7600AA00D36853 /* FoodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D5D4C1E7600AA00D36853 /* FoodCategory.swift */; };
@@ -67,15 +67,15 @@
 		CB6D5D2A1E75FFDB00D36853 /* ShareCodeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareCodeAPI.swift; sourceTree = "<group>"; };
 		CB6D5D2E1E76000400D36853 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
 		CB6D5D321E76004000D36853 /* Anonymous.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anonymous.swift; sourceTree = "<group>"; };
-		CB6D5D351E76006400D36853 /* Allergy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Allergy.swift; sourceTree = "<group>"; };
+		CB6D5D351E76006400D36853 /* ChildAllergy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildAllergy.swift; sourceTree = "<group>"; };
 		CB6D5D361E76006400D36853 /* Child.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
 		CB6D5D371E76006400D36853 /* ChildInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildInfo.swift; sourceTree = "<group>"; };
-		CB6D5D381E76006400D36853 /* Medicin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medicin.swift; sourceTree = "<group>"; };
+		CB6D5D381E76006400D36853 /* ChildMedicin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildMedicin.swift; sourceTree = "<group>"; };
 		CB6D5D391E76006400D36853 /* Registration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
 		CB6D5D3A1E76006400D36853 /* ShareCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareCode.swift; sourceTree = "<group>"; };
 		CB6D5D3B1E76006400D36853 /* Supplement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Supplement.swift; sourceTree = "<group>"; };
-		CB6D5D451E76008000D36853 /* AllergyType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllergyType.swift; sourceTree = "<group>"; };
-		CB6D5D461E76008000D36853 /* SupplementType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplementType.swift; sourceTree = "<group>"; };
+		CB6D5D451E76008000D36853 /* Allergy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Allergy.swift; sourceTree = "<group>"; };
+		CB6D5D461E76008000D36853 /* ChildSupplement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildSupplement.swift; sourceTree = "<group>"; };
 		CB6D5D4A1E7600AA00D36853 /* ActivityLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityLevel.swift; sourceTree = "<group>"; };
 		CB6D5D4B1E7600AA00D36853 /* FecesType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FecesType.swift; sourceTree = "<group>"; };
 		CB6D5D4C1E7600AA00D36853 /* FoodCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCategory.swift; sourceTree = "<group>"; };
@@ -188,13 +188,13 @@
 		CB6D5D341E76004600D36853 /* Child */ = {
 			isa = PBXGroup;
 			children = (
-				CB6D5D351E76006400D36853 /* Allergy.swift */,
 				CB6D5D361E76006400D36853 /* Child.swift */,
+				CB6D5D351E76006400D36853 /* ChildAllergy.swift */,
 				CB6D5D371E76006400D36853 /* ChildInfo.swift */,
-				CB6D5D381E76006400D36853 /* Medicin.swift */,
+				CB6D5D461E76008000D36853 /* ChildSupplement.swift */,
+				CB6D5D381E76006400D36853 /* ChildMedicin.swift */,
 				CB6D5D391E76006400D36853 /* Registration.swift */,
 				CB6D5D3A1E76006400D36853 /* ShareCode.swift */,
-				CB6D5D3B1E76006400D36853 /* Supplement.swift */,
 			);
 			name = Child;
 			sourceTree = "<group>";
@@ -211,8 +211,8 @@
 		CB6D5D441E76007200D36853 /* Child */ = {
 			isa = PBXGroup;
 			children = (
-				CB6D5D451E76008000D36853 /* AllergyType.swift */,
-				CB6D5D461E76008000D36853 /* SupplementType.swift */,
+				CB6D5D3B1E76006400D36853 /* Supplement.swift */,
+				CB6D5D451E76008000D36853 /* Allergy.swift */,
 			);
 			name = Child;
 			sourceTree = "<group>";
@@ -472,7 +472,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB6D5D3E1E76006400D36853 /* ChildInfo.swift in Sources */,
-				CB6D5D3C1E76006400D36853 /* Allergy.swift in Sources */,
+				CB6D5D3C1E76006400D36853 /* ChildAllergy.swift in Sources */,
 				CB6D5D421E76006400D36853 /* Supplement.swift in Sources */,
 				CB6D5D2F1E76000400D36853 /* NSDateExtension.swift in Sources */,
 				CB23C7151E75FC420046E5DF /* ViewController.swift in Sources */,
@@ -481,18 +481,18 @@
 				CB6D5D2C1E75FFDB00D36853 /* ShareCodeAPI.swift in Sources */,
 				CB6D5D531E7600AA00D36853 /* PainLevel.swift in Sources */,
 				CB23C71B1E75FC420046E5DF /* AbdoApp.xcdatamodeld in Sources */,
-				CB6D5D471E76008000D36853 /* AllergyType.swift in Sources */,
+				CB6D5D471E76008000D36853 /* Allergy.swift in Sources */,
 				CB6D5D2B1E75FFDB00D36853 /* API.swift in Sources */,
 				CB6D5D4F1E7600AA00D36853 /* ActivityLevel.swift in Sources */,
 				CB6D5D331E76004000D36853 /* Anonymous.swift in Sources */,
 				CB6D5D5C1E7600CE00D36853 /* Pain.swift in Sources */,
-				CB6D5D3F1E76006400D36853 /* Medicin.swift in Sources */,
+				CB6D5D3F1E76006400D36853 /* ChildMedicin.swift in Sources */,
 				CB23C7131E75FC420046E5DF /* AppDelegate.swift in Sources */,
 				CB6D5D5A1E7600CE00D36853 /* Feces.swift in Sources */,
 				CB6D5D501E7600AA00D36853 /* FecesType.swift in Sources */,
 				CB6D5D521E7600AA00D36853 /* FoodType.swift in Sources */,
 				CB6D5D411E76006400D36853 /* ShareCode.swift in Sources */,
-				CB6D5D481E76008000D36853 /* SupplementType.swift in Sources */,
+				CB6D5D481E76008000D36853 /* ChildSupplement.swift in Sources */,
 				CB6D5D3D1E76006400D36853 /* Child.swift in Sources */,
 				CB6D5D591E7600CE00D36853 /* Activity.swift in Sources */,
 				CB6D5D511E7600AA00D36853 /* FoodCategory.swift in Sources */,
@@ -712,6 +712,7 @@
 				CBF2B9651E760232006B9D44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

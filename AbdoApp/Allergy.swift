@@ -1,5 +1,5 @@
 //
-//  Allergy.swift
+//  AllergyType.swift
 //  ABDO
 //
 //  Created by GOD on 12/03/2017.
@@ -7,15 +7,3 @@
 //
 
 import Foundation
-
-class Allergy
-{
-    var createTimestamp: NSDate
-    var type: String
-    
-    init(createTimestamp: NSDate?, type: String?)
-    {
-        self.createTimestamp = createTimestamp ?? NSDate.minimumDate()
-        self.type = type ?? ""
-    }
-}

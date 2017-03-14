@@ -5,19 +5,32 @@ import Foundation
 ///
 public class ShareCode
 {
-    var createTimestamp: NSDate
-    var code: String
+    var childId : Int
+    var code : String
+    var createdTime : NSDate
+    var modifiedTime : NSDate
     
     required public init()
     {
-        self.createTimestamp = NSDate.minimumDate()
+        self.childId = 0
         self.code = ""
+        self.createdTime = NSDate()
+        self.modifiedTime = NSDate()
+    }
+    
+    convenience public init(childId : Int?, code : String?, createdTime : NSDate?, modifiedTime : NSDate?)
+    {
+        self.init()
+        self.childId = childId ?? 0
+        self.code = code ?? ""
+        self.createdTime = createdTime ?? NSDate()
+        self.modifiedTime = modifiedTime ?? NSDate()
     }
     
     func CreateShareCode()
     {
-        self.createTimestamp = NSDate()
         self.code = randomShareCode(length: 6)
+        self.modifiedTime = NSDate()
     }
     
     private func randomShareCode(length: Int) -> String
