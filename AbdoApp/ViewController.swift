@@ -1,13 +1,4 @@
-//
-//  ViewController.swift
-//  AbdoApp
-//
-//  Created by GOD on 12/03/2017.
-//  Copyright © 2017 GOD. All rights reserved.
-//
-
 import UIKit
-import Alamofire
 
 class ViewController: UIViewController {
 
@@ -20,7 +11,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 
