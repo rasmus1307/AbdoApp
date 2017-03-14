@@ -68,7 +68,12 @@ class AbdoAppTests: XCTestCase {
     
     func testRegistration()
     {
-        
+        let child1 : Child = Child()
+        child1.childInfo.name = "Rasmus"
+        child1.shareCode.CreateShareCode()
+        child1.allergies.append(ChildAllergy())
+        child1.registrations.append(Registration())
+        print("\(child1.childInfo.name) sharecode \(child1.shareCode.code)")
     }
     
     func testSingleton()
