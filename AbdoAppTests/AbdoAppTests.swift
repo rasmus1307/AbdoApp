@@ -70,4 +70,9 @@ class AbdoAppTests: XCTestCase {
     {
         
     }
+    
+    func testSingleton()
+    {
+        let s : Singleton!
+    }
 }

@@ -4,8 +4,9 @@ public class API
 {
     var shareCode : ShareCodeApi
     
-    init()
+    public init()
     {
         self.shareCode = ShareCodeApi()
     }
+    
 }

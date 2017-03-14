@@ -1,11 +1,3 @@
-//
-//  Child.swift
-//  ABDO
-//
-//  Created by GOD on 12/03/2017.
-//  Copyright © 2017 GOD. All rights reserved.
-//
-
 import Foundation
 
 public class Child
@@ -20,11 +12,25 @@ public class Child
     var createdTime : NSDate
     var modifiedTime : NSDate
     
-    required public init(id : String?, childAllergies : [ChildAllergy]?, childInfo : ChildInfo?,
+    required public init()
+    {
+        self.id = ""
+        self.allergies = []
+        self.childInfo = ChildInfo()
+        self.medicins = []
+        self.registrations = []
+        self.shareCode = ShareCode()
+        self.supplements = []
+        self.createdTime = NSDate()
+        self.modifiedTime = NSDate()
+    }
+    
+    convenience public init(id : String?, childAllergies : [ChildAllergy]?, childInfo : ChildInfo?,
                          childMedicin : [ChildMedicin]?, registrations : [Registration]?,
                          shareCode : ShareCode?, supplements : [Supplement]?,
                          createdTime : NSDate?, modifiedTime : NSDate? )
     {
+        self.init()
         self.id = id ?? ""
         self.allergies = childAllergies ?? []
         self.childInfo = childInfo ?? ChildInfo()

@@ -10,7 +10,7 @@ public class ShareCodeApi
         // insert sharecode through API
         print("Child named \(child.childInfo.name),"
             + "has share code \(child.shareCode.code),"
-            + "valid from \(child.shareCode.createTimestamp)")
+            + "valid from \(child.shareCode.createdTime)")
     }
     
     public func Get(child: Child)

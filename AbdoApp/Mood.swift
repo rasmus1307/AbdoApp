@@ -1,23 +1,23 @@
 import Foundation
 
-public class Activity
+public class Mood
 {
     var id : Int
-    var level : String
+    var type : String
     var createdTime : NSDate
     var modifiedTime : NSDate
     
     required public init() {
         self.id = 0
-        self.level = ""
+        self.type = ""
         self.createdTime = NSDate()
         self.modifiedTime = NSDate()
     }
     
-    convenience init(id : Int?, level : String?, createdTime : NSDate?, modifiedTime : NSDate?) {
+    convenience init(id : Int?, type : String?, createdTime : NSDate?, modifiedTime : NSDate?) {
         self.init()
         self.id = id ?? 0
-        self.level = level ?? ""
+        self.type = type ?? ""
         self.createdTime = createdTime ?? NSDate()
         self.modifiedTime = modifiedTime ?? NSDate()
     }

@@ -1,11 +1,3 @@
-//
-//  Allergy.swift
-//  ABDO
-//
-//  Created by GOD on 12/03/2017.
-//  Copyright © 2017 GOD. All rights reserved.
-//
-
 import Foundation
 
 public class ChildAllergy
@@ -20,7 +12,7 @@ public class ChildAllergy
     {
         self.id = 0
         self.childId = 0
-        self.allergyId = ""
+        self.allergyId = 0
         self.createdTime = NSDate()
         self.modifiedTime = NSDate()
     }
@@ -30,7 +22,7 @@ public class ChildAllergy
         self.init()
         self.id = id ?? 0
         self.childId = childId ?? 0
-        self.allergyId = allergyId ?? ""
+        self.allergyId = allergyId ?? 0
         self.createdTime = createdTime ?? NSDate()
         self.modifiedTime = modifiedTime ?? NSDate()
     }
