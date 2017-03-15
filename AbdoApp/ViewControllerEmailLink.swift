@@ -1,19 +1,10 @@
-//
-//  ViewControllerLinkEmail.swift
-//  AbdoApp
-//
-//  Created by GOD on 14/03/2017.
-//  Copyright © 2017 GOD. All rights reserved.
-//
-
 import UIKit
 
 class ViewControllerEmailLink: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = ColorScheme().backgroundColor
         self.hideKeyboardWhenTappedAround()
     }
 
