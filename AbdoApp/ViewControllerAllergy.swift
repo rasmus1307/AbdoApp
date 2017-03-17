@@ -1,26 +1,35 @@
 import UIKit
 
-class ViewControllerAllergy: UIViewController {
-
+class ViewControllerAllergy: UIViewController, UITableViewDataSource {
+    
+    var datasource : [Allergy] = Singleton.SharedInstance.allergies
+    
+    // Title for the table view
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Vælg en allergi"
+    }
+    
+    // How many sections in the table view
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    // How many rows in the table view
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return datasource.count
+    }
+    
+    // What is the contents of each cell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        let (allergi) = self.datasource[indexPath.row]
+        cell.textLabel?.text = allergi.type
+        return cell
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = ColorScheme().backgroundColor
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

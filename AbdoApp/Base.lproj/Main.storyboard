@@ -29,100 +29,71 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iRm-T5-hIb">
-                                <rect key="frame" x="16" y="72" width="343" height="119"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVE-Oo-SY1">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="51"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                        <state key="normal" title="Stamdata"/>
-                                        <connections>
-                                            <segue destination="Q1B-fE-pUN" kind="show" id="24s-6I-QAE"/>
-                                        </connections>
-                                    </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Ingen allergier tilføjet" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xSa-z7-4t8">
-                                        <rect key="frame" x="0.0" y="59" width="343" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVE-Oo-SY1">
+                                <rect key="frame" x="16" y="72" width="343" height="51"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Stamdata"/>
+                                <connections>
+                                    <segue destination="Q1B-fE-pUN" kind="show" id="24s-6I-QAE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7CR-vx-Ec8">
+                                <rect key="frame" x="10" y="327" width="343" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Allergier"/>
+                                <connections>
+                                    <segue destination="zLJ-Az-ATq" kind="show" id="DTU-it-JCX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LF4-LZ-Q8m">
+                                <rect key="frame" x="16" y="453" width="343" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Kosttilskud"/>
+                                <connections>
+                                    <segue destination="Xsl-sP-bpz" kind="show" id="X7H-dy-KeN"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Ingen kosttilskud tilføjet" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9wV-Is-7VI">
+                                <rect key="frame" x="16" y="511" width="343" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wj2-NG-zfS">
-                                <rect key="frame" x="16" y="199" width="343" height="118"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7CR-vx-Ec8">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                        <state key="normal" title="Allergier"/>
-                                        <connections>
-                                            <segue destination="zLJ-Az-ATq" kind="show" id="DTU-it-JCX"/>
-                                        </connections>
-                                    </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Ingen allergier tilføjet" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uhJ-EK-jHJ">
-                                        <rect key="frame" x="0.0" y="58" width="343" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Ingen allergier tilføjet" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uhJ-EK-jHJ">
+                                <rect key="frame" x="16" y="385" width="343" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Ingen stamdata tilføjet" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xSa-z7-4t8">
+                                <rect key="frame" x="16" y="131" width="343" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7T1-Mr-OSV">
-                                <rect key="frame" x="16" y="325" width="343" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHV-oQ-xA6">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="52"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                        <state key="normal" title="Medicin"/>
-                                        <connections>
-                                            <segue destination="vg1-Ul-gcw" kind="show" id="Ny9-6Y-JHF"/>
-                                        </connections>
-                                    </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Ingen medicin tilføjet" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hct-uo-k2z">
-                                        <rect key="frame" x="0.0" y="60" width="343" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHV-oQ-xA6">
+                                <rect key="frame" x="16" y="199" width="343" height="52"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Medicin"/>
+                                <connections>
+                                    <segue destination="vg1-Ul-gcw" kind="show" id="Ny9-6Y-JHF"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Ingen medicin tilføjet" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hct-uo-k2z">
+                                <rect key="frame" x="16" y="259" width="343" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4m4-4w-T2j">
-                                <rect key="frame" x="16" y="453" width="343" height="119"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LF4-LZ-Q8m">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                        <state key="normal" title="Kosttilskud"/>
-                                        <connections>
-                                            <segue destination="Xsl-sP-bpz" kind="show" id="X7H-dy-KeN"/>
-                                        </connections>
-                                    </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Ingen kosttilskud tilføjet" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9wV-Is-7VI">
-                                        <rect key="frame" x="0.0" y="58" width="343" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dik-TV-n5q">
-                                <rect key="frame" x="16" y="580" width="343" height="62.5"/>
+                                <rect key="frame" x="16" y="579" width="343" height="62.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Gem"/>
@@ -157,7 +128,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Navn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKQ-Ky-4ke">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Navn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKQ-Ky-4ke">
                                 <rect key="frame" x="16" y="93" width="343" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -171,8 +142,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="nameWasEdited:" destination="Q1B-fE-pUN" eventType="editingDidEnd" id="OcI-oT-3bN"/>
-                                    <action selector="textfieldNameEdited:" destination="Q1B-fE-pUN" eventType="editingDidEnd" id="1TJ-N9-E7M"/>
+                                    <action selector="nameEdited:" destination="Q1B-fE-pUN" eventType="editingDidEnd" id="Zlu-q6-6v2"/>
                                 </connections>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="Qnv-CE-isy">
@@ -183,17 +153,17 @@
                                     <segment title="Dreng"/>
                                 </segments>
                                 <connections>
-                                    <action selector="genderWasSelected:" destination="Q1B-fE-pUN" eventType="valueChanged" id="HbX-pG-oNH"/>
+                                    <action selector="genderEdited:" destination="Q1B-fE-pUN" eventType="valueChanged" id="pcw-8W-i6l"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Køn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkC-tA-TN4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Køn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkC-tA-TN4">
                                 <rect key="frame" x="16" y="206" width="343" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fødselsdato" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8i-nK-kri">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fødselsdato" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8i-nK-kri">
                                 <rect key="frame" x="16" y="321" width="343" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -208,7 +178,7 @@
                                 </date>
                                 <locale key="locale" localeIdentifier="da_DK"/>
                                 <connections>
-                                    <action selector="birthdateWasEdited:" destination="Q1B-fE-pUN" eventType="editingDidEnd" id="UZJ-fB-AgR"/>
+                                    <action selector="birthdateEdited:" destination="Q1B-fE-pUN" eventType="valueChanged" id="GcD-hC-WPR"/>
                                 </connections>
                             </datePicker>
                         </subviews>
@@ -228,7 +198,7 @@
         <!--Allergier-->
         <scene sceneID="oi7-br-teO">
             <objects>
-                <viewController id="zLJ-Az-ATq" customClass="ViewControllerAllergy" customModule="AbdoApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="zLJ-Az-ATq" customClass="ViewControllerAllergy" customModule="AbdoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BJ5-oi-BIz"/>
                         <viewControllerLayoutGuide type="bottom" id="gD3-dx-t1K"/>
@@ -237,20 +207,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GO6-cw-4D8">
-                                <rect key="frame" x="16" y="72" width="343" height="474"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mAN-48-Adm">
+                                <rect key="frame" x="16" y="72" width="343" height="575"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAP-DJ-4pz">
-                                <rect key="frame" x="159" y="591" width="56" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
-                                <state key="normal" title="+"/>
                                 <connections>
-                                    <segue destination="So8-l7-OTn" kind="show" id="oZh-cM-5KK"/>
+                                    <outlet property="dataSource" destination="zLJ-Az-ATq" id="V2r-HQ-jCa"/>
                                 </connections>
-                            </button>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -258,12 +222,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m4h-L0-E8E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2618" y="-1670"/>
+            <point key="canvasLocation" x="2616.8000000000002" y="-1670.0149925037483"/>
         </scene>
         <!--Medicin-->
         <scene sceneID="MHF-Ee-KE8">
             <objects>
-                <viewController storyboardIdentifier="Medicin" id="vg1-Ul-gcw" customClass="ViewControllerMedicin" customModule="AbdoApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Medicin" automaticallyAdjustsScrollViewInsets="NO" id="vg1-Ul-gcw" customClass="ViewControllerMedicin" customModule="AbdoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BkJ-Yy-pnu"/>
                         <viewControllerLayoutGuide type="bottom" id="r8x-Ud-KTZ"/>
@@ -272,11 +236,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nta-Ba-Mit">
-                                <rect key="frame" x="16" y="72" width="343" height="474"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umf-Ro-Ywj">
                                 <rect key="frame" x="159" y="591" width="56" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -286,6 +245,19 @@
                                     <segue destination="YN8-2Z-HbM" kind="show" id="KBL-vN-mcP"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nta-Ba-Mit">
+                                <rect key="frame" x="16" y="72" width="343" height="474"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <tableView key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="WQs-Xs-7Zg">
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="474"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <connections>
+                                        <outlet property="dataSource" destination="vg1-Ul-gcw" id="2lh-K1-hzw"/>
+                                    </connections>
+                                </tableView>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -307,26 +279,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medicin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DpE-b4-tYj">
-                                <rect key="frame" x="24" y="104" width="327" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medicin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DpE-b4-tYj">
+                                <rect key="frame" x="24" y="104" width="327" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t46-YL-40p">
-                                <rect key="frame" x="24" y="148" width="327" height="30"/>
+                                <rect key="frame" x="24" y="141" width="327" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dosering" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Zm-Ya-dQm">
-                                <rect key="frame" x="24" y="186" width="327" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dosering" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Zm-Ya-dQm">
+                                <rect key="frame" x="24" y="179" width="327" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2AL-C3-5al">
-                                <rect key="frame" x="24" y="230" width="327" height="30"/>
+                                <rect key="frame" x="24" y="216" width="327" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -368,70 +340,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E8F-WP-7gl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3288.8000000000002" y="-991.75412293853083"/>
-        </scene>
-        <!--Tilføj-->
-        <scene sceneID="wGJ-KX-wCe">
-            <objects>
-                <viewController id="So8-l7-OTn" customClass="ViewControllerAllergyAdd" customModule="AbdoApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="yIt-nK-5fU"/>
-                        <viewControllerLayoutGuide type="bottom" id="tt2-p3-icn"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8dP-R1-pVa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Imn-XB-Ror">
-                                <rect key="frame" x="16" y="72" width="343" height="575"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Tilføj" id="GWL-xQ-41z">
-                        <barButtonItem key="rightBarButtonItem" title="Gem" id="yet-ml-Hos">
-                            <connections>
-                                <action selector="allergySave:" destination="So8-l7-OTn" id="saW-6r-xoJ"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="T58-d6-zbR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3289" y="-1670"/>
-        </scene>
-        <!--Tilføj-->
-        <scene sceneID="kZA-13-ELZ">
-            <objects>
-                <viewController id="RfW-AH-Sy6" customClass="ViewControllerSupplementAdd" customModule="AbdoApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="UCi-Up-Gnz"/>
-                        <viewControllerLayoutGuide type="bottom" id="SVk-07-0fM"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3sz-D3-t6T">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A5U-Gi-mRP">
-                                <rect key="frame" x="16" y="72" width="343" height="575"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Tilføj" id="HdH-ac-InR">
-                        <barButtonItem key="rightBarButtonItem" title="Gem" id="bR0-UA-bCR">
-                            <connections>
-                                <action selector="SupplementSave:" destination="RfW-AH-Sy6" id="Yxz-4B-mQc"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iq2-Uv-dgC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3289" y="-300"/>
         </scene>
         <!--StaticsNC-->
         <scene sceneID="Qzf-5B-3xJ">
@@ -659,9 +567,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="So8-l7-OTn" kind="relationship" relationship="rootViewController" id="8ZX-Qq-YiK"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H8L-lI-BeH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -688,7 +593,7 @@
         <!--Kosttilskud-->
         <scene sceneID="FOF-vU-W9c">
             <objects>
-                <viewController id="Xsl-sP-bpz" customClass="ViewControllerSupplement" customModule="AbdoApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Xsl-sP-bpz" customClass="ViewControllerSupplement" customModule="AbdoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="i1D-JP-Wq3"/>
                         <viewControllerLayoutGuide type="bottom" id="Xob-sY-eYs"/>
@@ -697,19 +602,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MkA-hC-Vut">
-                                <rect key="frame" x="159" y="591" width="56" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
-                                <state key="normal" title="+"/>
-                                <connections>
-                                    <segue destination="RfW-AH-Sy6" kind="show" id="EqX-TN-Nch"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SMD-AX-IsC">
-                                <rect key="frame" x="16" y="72" width="343" height="474"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SMD-AX-IsC">
+                                <rect key="frame" x="16" y="72" width="343" height="575"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Xsl-sP-bpz" id="XBr-jz-7Hg"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -718,7 +617,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Th-zf-z08" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2618" y="-301"/>
+            <point key="canvasLocation" x="2616.8000000000002" y="-301.79910044977515"/>
         </scene>
         <!--SupplementNC-->
         <scene sceneID="JaH-tR-HVc">
@@ -730,9 +629,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="RfW-AH-Sy6" kind="relationship" relationship="rootViewController" id="NgY-gl-ugl"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kle-aL-bfI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -812,13 +708,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="b4w-hF-7pZ"/>
         <segue reference="iwM-Oa-4YH"/>
+        <segue reference="b4w-hF-7pZ"/>
         <segue reference="gdy-8d-QLW"/>
         <segue reference="PLQ-o2-kY1"/>
         <segue reference="24s-6I-QAE"/>
         <segue reference="KBL-vN-mcP"/>
-        <segue reference="EqX-TN-Nch"/>
-        <segue reference="oZh-cM-5KK"/>
     </inferredMetricsTieBreakers>
 </document>

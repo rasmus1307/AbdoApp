@@ -12,8 +12,9 @@ public class Singleton
     }
     
     var api : API
-    var anonymous : Anonymous
-    var child : Child
+    
+    // System vairables
+    var allergies : [Allergy]
     var activities : [Activity]
     var feces : [Feces]
     var foodCategory : [FoodCategory]
@@ -22,13 +23,24 @@ public class Singleton
     var painLevel : [PainLevel]
     var painPlacement : [PainPlacement]
     var sleep : [Sleep]
+    var supplements : [Supplement]
+    
+    // Smart phone registration
+    var anonymous : Anonymous
+    
+    // Child objects containing all information about one or more children
+    var child : [Child]
+    
+    // Current child selected
+    var currentChildId : Int
     
     private init()
     {
         print("Singleton started")
         self.api = API()
         self.anonymous = Anonymous()
-        self.child = Child()
+        self.allergies = SetupVariables().allAllergies
+        self.child = []
         self.activities = []
         self.feces = []
         self.foodCategory = []
@@ -37,6 +49,8 @@ public class Singleton
         self.painLevel = []
         self.painPlacement = []
         self.sleep = []
+        self.supplements = SetupVariables().allSupplements
+        self.currentChildId = 0
     }
     
 }

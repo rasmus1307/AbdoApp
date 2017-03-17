@@ -2,17 +2,27 @@ import UIKit
 
 class ViewControllerMasterdata: UIViewController {
 
+    var newChild = Child()
+    
     @IBOutlet weak var textfieldName: UITextField!
     @IBOutlet weak var selectedGender: UISegmentedControl!
     @IBOutlet weak var datepickerBirthday: UIDatePicker!
     
-    @IBAction func nameWasEdited(_ sender: UITextField) {
+    @IBAction func nameEdited(_ sender: UITextField) {
+        newChild.childInfo.name = self.textfieldName.text!
+    }
+
+    @IBAction func genderEdited(_ sender: UISegmentedControl) {
+        if self.selectedGender.description == "Pige" {
+            newChild.childInfo.isFemale = true
+        }
+        else {
+            newChild.childInfo.isFemale = false
+        }
     }
     
-    @IBAction func genderWasSelected(_ sender: UISegmentedControl) {
-    }
-    
-    @IBAction func birthdateWasEdited(_ sender: UIDatePicker) {
+    @IBAction func birthdateEdited(_ sender: UIDatePicker) {
+        newChild.childInfo.birthdate = self.datepickerBirthday.date as NSDate
     }
     
     override func viewDidLoad() {
@@ -21,22 +31,15 @@ class ViewControllerMasterdata: UIViewController {
         self.hideKeyboardWhenTappedAround()
         self.selectedGender.backgroundColor = UIColor.white
         self.datepickerBirthday.backgroundColor = UIColor.white
+        self.textfieldName.text = newChild.childInfo.name
+        if newChild.childInfo.isFemale
+        {
+            self.selectedGender.selectedSegmentIndex = 0
+        }
+        else {
+            self.selectedGender.selectedSegmentIndex = 1
+        }
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
