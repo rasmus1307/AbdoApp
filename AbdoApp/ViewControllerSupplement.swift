@@ -1,7 +1,9 @@
 import UIKit
 
-class ViewControllerSupplement: UIViewController, UITableViewDataSource {
-
+class ViewControllerSupplement: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     var datasource : [Supplement] = Singleton.SharedInstance.supplements
     
     // Title for the table view
@@ -27,9 +29,31 @@ class ViewControllerSupplement: UIViewController, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        print("\(self.datasource[indexPath.row].type)")
+        
+        // adding the value to childs list of supplement
+
+        // adding checkmark to row
+        if let cell = tableView.cellForRow(at: indexPath){
+            cell.accessoryType = .checkmark
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath)
+    {
+        print("\(self.datasource[indexPath.row].type)")
+        if let cell = tableView.cellForRow(at: indexPath) {
+            cell.accessoryType = .none
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = ColorScheme().backgroundColor
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
     }
 
 }

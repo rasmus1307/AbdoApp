@@ -7,16 +7,11 @@ class ViewControllerMasterdata: UIViewController {
     @IBOutlet weak var textfieldName: UITextField!
     @IBOutlet weak var selectedGender: UISegmentedControl!
     @IBOutlet weak var datepickerBirthday: UIDatePicker!
-    
-    @IBAction func nameEdited(_ sender: UITextField) {
-        self.theChild.childInfo.name = self.textfieldName.text!
-    }
 
     @IBAction func genderEdited(_ sender: UISegmentedControl) {
         if self.selectedGender.description == "Pige" {
             self.theChild.childInfo.isFemale = true
-        }
-        else {
+        } else {
             self.theChild.childInfo.isFemale = false
         }
     }
@@ -27,6 +22,10 @@ class ViewControllerMasterdata: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         theChild = Singleton.SharedInstance.child[Singleton.SharedInstance.currentChildId]
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.theChild.childInfo.name = self.textfieldName.text!
     }
     
     override func viewDidLoad() {

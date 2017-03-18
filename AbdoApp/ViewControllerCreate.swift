@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class ViewControllerCreate: UIViewController {
 
     @IBOutlet weak var textviewStamdata: UITextView!
     @IBOutlet weak var textviewAllergies: UITextView!
@@ -36,6 +36,19 @@ class ViewController: UIViewController {
         
         // updating text field regarding allergies
         self.textviewAllergies.text = "Ingen allergier indtastet"
+//        var allergyArray = [String]()
+//        for allergy in theChild.allergies
+//        {
+//            allergyArray.append(allergy.)
+//        }
+//        if allergyArray.count == 0
+//        {
+//            self.textviewAllergies.text = "Ingen allergier indtastet"
+//        } else
+//        {
+//            self.textviewAllergies.text = medicinArray.joined(separator: ", ")
+//        }
+        
         
         // updating text field regarding supplements
         self.textviewSupplement.text = "Ingen kosttilskud indtastet"
