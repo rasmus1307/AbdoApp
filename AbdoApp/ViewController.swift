@@ -7,7 +7,44 @@ class ViewController: UIViewController {
     @IBOutlet weak var textviewMedicin: UITextView!
     @IBOutlet weak var textviewSupplement: UITextView!
     
-    var newChild = Singleton.SharedInstance.child.append(_: Child())
+    let newChild = Singleton.SharedInstance.child.append(_: Child())
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let theChild = Singleton.SharedInstance.child[Singleton.SharedInstance.currentChildId]
+        
+        // updating text field regarding child info
+        if theChild.childInfo.name == "" {
+            self.textviewStamdata.text = "Ingen stamdata indtastet"
+        } else
+        {
+            self.textviewStamdata.text = "\(theChild.childInfo.name)"
+        }
+        
+        // updating text field regarding medicin
+        var medicinArray = [String]()
+        for medicin in theChild.medicins
+        {
+            medicinArray.append(medicin.type)
+        }
+        if medicinArray.count == 0
+        {
+            self.textviewMedicin.text = "Ingen medicin indtastet"
+        } else
+        {
+            self.textviewMedicin.text = medicinArray.joined(separator: ", ")
+        }
+        
+        // updating text field regarding allergies
+        self.textviewAllergies.text = "Ingen allergier indtastet"
+        
+        // updating text field regarding supplements
+        self.textviewSupplement.text = "Ingen kosttilskud indtastet"
+        
+        self.textviewStamdata.reloadInputViews()
+        self.textviewMedicin.reloadInputViews()
+        self.textviewAllergies.reloadInputViews()
+        self.textviewSupplement.reloadInputViews()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
