@@ -15,6 +15,7 @@
 		CB23C71B1E75FC420046E5DF /* AbdoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB23C7191E75FC420046E5DF /* AbdoApp.xcdatamodeld */; };
 		CB23C71D1E75FC420046E5DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB23C71C1E75FC420046E5DF /* Assets.xcassets */; };
 		CB23C7201E75FC420046E5DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB23C71E1E75FC420046E5DF /* LaunchScreen.storyboard */; };
+		CB6BB69D1E7C89890058585A /* DataSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6BB69C1E7C89890058585A /* DataSingleton.swift */; };
 		CB6D5D2B1E75FFDB00D36853 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D5D291E75FFDB00D36853 /* API.swift */; };
 		CB6D5D2C1E75FFDB00D36853 /* ShareCodeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D5D2A1E75FFDB00D36853 /* ShareCodeAPI.swift */; };
 		CB6D5D2F1E76000400D36853 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D5D2E1E76000400D36853 /* NSDateExtension.swift */; };
@@ -75,6 +76,7 @@
 		CB23C71C1E75FC420046E5DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB23C71F1E75FC420046E5DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB23C7211E75FC420046E5DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB6BB69C1E7C89890058585A /* DataSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSingleton.swift; sourceTree = "<group>"; };
 		CB6D5D291E75FFDB00D36853 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		CB6D5D2A1E75FFDB00D36853 /* ShareCodeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareCodeAPI.swift; sourceTree = "<group>"; };
 		CB6D5D2E1E76000400D36853 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				CBB62E9F1E776F8E005C9FEC /* Singleton.swift */,
 				CB7FD1FC1E7895DD00AFFE3D /* ColorScheme.swift */,
 				CB7FD1FE1E79D3EC00AFFE3D /* SetupVariables.swift */,
+				CB6BB69C1E7C89890058585A /* DataSingleton.swift */,
 				CB6D5D281E75FFC100D36853 /* API */,
 				CB6D5D301E76000B00D36853 /* Objects */,
 				CB6D5D2D1E75FFED00D36853 /* SwiftExtensions */,
@@ -543,6 +546,7 @@
 				CB7FD1FF1E79D3ED00AFFE3D /* SetupVariables.swift in Sources */,
 				CB6D5D481E76008000D36853 /* ChildSupplement.swift in Sources */,
 				CB6D5D3D1E76006400D36853 /* Child.swift in Sources */,
+				CB6BB69D1E7C89890058585A /* DataSingleton.swift in Sources */,
 				CB6D5D511E7600AA00D36853 /* FoodCategory.swift in Sources */,
 				CBB62EA41E77777D005C9FEC /* Sleep.swift in Sources */,
 			);

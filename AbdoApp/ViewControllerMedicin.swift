@@ -1,7 +1,10 @@
 import UIKit
 
-class ViewControllerMedicin: UIViewController, UITableViewDataSource {
+class ViewControllerMedicin: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    // Variable containing all the childs medicins
     var datasource : [ChildMedicin] = Singleton.SharedInstance.child[Singleton.SharedInstance.currentChildId].medicins
     
     // Title for the table view
@@ -27,8 +30,10 @@ class ViewControllerMedicin: UIViewController, UITableViewDataSource {
         return cell
     }
     
+    // When the view appears the data for the table view is refreshed
     override func viewWillAppear(_ animated: Bool) {
-        
+        self.datasource = Singleton.SharedInstance.child[Singleton.SharedInstance.currentChildId].medicins
+        self.tableView.reloadData()
     }
     
     override func viewDidLoad() {

@@ -262,6 +262,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Medicin" id="aSw-vP-EwB"/>
+                    <connections>
+                        <outlet property="tableView" destination="WQs-Xs-7Zg" id="NEF-Da-fJ5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bti-b0-RnU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

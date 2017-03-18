@@ -6,7 +6,7 @@ class ViewControllerSupplement: UIViewController, UITableViewDataSource {
     
     // Title for the table view
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Vælg en allergi"
+        return "Vælg kosttilskud"
     }
     
     // How many sections in the table view

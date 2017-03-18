@@ -78,6 +78,12 @@ class AbdoAppTests: XCTestCase {
     
     func testSingleton()
     {
-        let s : Singleton!
+        let childArray = DataContainerSingleton.sharedDataContainer.child
+        print("\(childArray?.count)")
+        var newChild = Child()
+        newChild.childInfo.name = "Rasmus"
+        DataContainerSingleton.sharedDataContainer.child?.append(newChild)
+        print("\(childArray?.count)")
+        
     }
 }
