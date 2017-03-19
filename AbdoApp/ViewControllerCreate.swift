@@ -22,9 +22,11 @@ class ViewControllerCreate: UIViewController {
         
         // updating text field regarding medicin
         var medicinArray = [String]()
-        for medicin in theChild.medicins
+        for (medicin) in theChild.medicins
         {
-            medicinArray.append(medicin.type)
+            var dosage = ""
+            if (medicin.dosage == ""){} else {dosage = "(\(medicin.dosage))"}
+            medicinArray.append("\(medicin.type) \(dosage)")
         }
         if medicinArray.count == 0
         {

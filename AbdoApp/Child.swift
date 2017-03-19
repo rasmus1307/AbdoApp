@@ -26,9 +26,9 @@ public class Child
     }
     
     convenience public init(id : String?, childAllergies : [ChildAllergy]?, childInfo : ChildInfo?,
-                         childMedicin : [ChildMedicin]?, registrations : [Registration]?,
-                         shareCode : ShareCode?, supplements : [Supplement]?,
-                         createdTime : NSDate?, modifiedTime : NSDate? )
+                            childMedicin : [ChildMedicin]?, registrations : [Registration]?,
+                            shareCode : ShareCode?, supplements : [Supplement]?,
+                            createdTime : NSDate?, modifiedTime : NSDate? )
     {
         self.init()
         self.id = id ?? ""

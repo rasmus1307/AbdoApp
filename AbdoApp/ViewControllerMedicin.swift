@@ -6,6 +6,7 @@ class ViewControllerMedicin: UIViewController, UITableViewDataSource, UITableVie
     
     // Variable containing all the childs medicins
     var datasource : [ChildMedicin] = Singleton.SharedInstance.child[Singleton.SharedInstance.currentChildId].medicins
+    var deleteMedicinIndexPath: NSIndexPath? = nil
     
     // Title for the table view
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -25,8 +26,10 @@ class ViewControllerMedicin: UIViewController, UITableViewDataSource, UITableVie
     // What is the contents of each cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        let (medicin) = self.datasource[indexPath.row]
-        cell.textLabel?.text = medicin.type
+        let medicin = self.datasource[indexPath.row]
+        var dosage = ""
+        if (medicin.dosage == ""){} else {dosage = "(\(medicin.dosage))"}
+        cell.textLabel?.text = "\(medicin.type)\t\(dosage)"
         return cell
     }
     
@@ -34,6 +37,25 @@ class ViewControllerMedicin: UIViewController, UITableViewDataSource, UITableVie
     override func viewWillAppear(_ animated: Bool) {
         self.datasource = Singleton.SharedInstance.child[Singleton.SharedInstance.currentChildId].medicins
         self.tableView.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+    {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            var i = 0
+            print("\(indexPath.row.description)")
+            for childMeds in Singleton.SharedInstance.child[Singleton.SharedInstance.currentChildId].medicins {
+                if ("\(childMeds.type)" == "\(self.datasource[indexPath.row].type)") {
+                    Singleton.SharedInstance.child[Singleton.SharedInstance.currentChildId].medicins.remove(at: i)
+                } else {i += 1}
+            }
+            datasource.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
     
     override func viewDidLoad() {
