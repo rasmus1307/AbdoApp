@@ -25,8 +25,8 @@ class ViewControllerCreate: UIViewController {
         for (medicin) in theChild.medicins
         {
             var dosage = ""
-            if (medicin.dosage == ""){} else {dosage = "(\(medicin.dosage))"}
-            medicinArray.append("\(medicin.type) \(dosage)")
+            if (medicin.dosage == ""){} else {dosage = "( \(medicin.dosage))"}
+            medicinArray.append("\(medicin.type)\(dosage)")
         }
         if medicinArray.count == 0
         {
