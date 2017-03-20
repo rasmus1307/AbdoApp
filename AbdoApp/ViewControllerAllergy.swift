@@ -57,6 +57,7 @@ class ViewControllerAllergy: UIViewController, UITableViewDataSource, UITableVie
                 cell.isHighlighted = false
             }
         }
+        self.tableView.reloadData()
     }
     
     override func viewDidLoad() {

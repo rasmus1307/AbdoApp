@@ -24,7 +24,6 @@ class ViewControllerStartpage: UIViewController {
         button.layer.borderColor = UIColor.black.cgColor
         button.backgroundColor = ColorScheme().buttonColor
         button.titleLabel?.textColor = ColorScheme().buttonTextColor
-        
     }
 
 }

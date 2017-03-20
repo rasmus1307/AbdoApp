@@ -62,6 +62,7 @@ class ViewControllerSupplement: UIViewController, UITableViewDataSource, UITable
                 cell.isHighlighted = false
             }
         }
+        self.tableView.reloadData()
     }
     
     override func viewDidLoad()

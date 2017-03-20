@@ -42,4 +42,38 @@ public class Child
         self.modifiedTime = modifiedTime ?? NSDate()
     }
     
+    func convertChildInfoToArray() -> [String] {
+        var childInfoArray = [String]()
+        
+        // adding name of the child
+        if self.childInfo.name != "" {
+            childInfoArray.append(self.childInfo.name)
+            
+            // adding gender of the child
+            if self.childInfo.isFemale {
+                childInfoArray.append("Pige")
+            } else {childInfoArray.append("Dreng")
+            }
+        }
+        
+        // adding the birthdate of the child
+        if self.childInfo.birthdate != NSDate.minimumDate() {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd. MMM yyyy"
+            let dateString = dateFormatter.string(from: childInfo.birthdate as Date)
+            childInfoArray.append("\(dateString)")
+        }
+        return childInfoArray
+    }
+    
+    func convertMedicinToArray() -> [String] {
+        var medicinArray = [String]()
+        for item in medicins {
+            var dosage = ""
+            if (item.dosage == ""){} else {dosage = " (\(item.dosage))"}
+            medicinArray.append("\(item.type)\(dosage)")
+        }
+        return medicinArray
+    }
+    
 }

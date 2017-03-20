@@ -2,6 +2,7 @@ import UIKit
 
 class ViewControllerMedicin: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var buttonAdd: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
     // Variable containing all the childs medicins
@@ -61,6 +62,16 @@ class ViewControllerMedicin: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = ColorScheme().backgroundColor
+        changeButtonStyling(button: self.buttonAdd)
+    }
+    
+    func changeButtonStyling(button : UIButton)
+    {
+        button.layer.cornerRadius = 0.5 * button.bounds.size.width
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.black.cgColor
+        button.backgroundColor = ColorScheme().buttonColor
+        button.titleLabel?.textColor = ColorScheme().buttonColor
     }
 
 }

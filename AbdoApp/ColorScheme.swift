@@ -7,5 +7,4 @@ public struct ColorScheme {
     public let barColor = UIColor(red: 220/255.0, green: 91/255.0, blue: 33/255.0, alpha: 1)
     public let tintColor = UIColor(red: 244/255.0, green: 244/255.0, blue: 242/255.0, alpha: 1)
     public let buttonTextColor = UIColor.white
-    
 }

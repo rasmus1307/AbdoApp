@@ -2,6 +2,7 @@ import UIKit
 
 class ViewControllerCreate: UIViewController {
 
+    @IBOutlet weak var buttonMasterData: UIButton!
     @IBOutlet weak var textviewStamdata: UITextView!
     @IBOutlet weak var textviewAllergies: UITextView!
     @IBOutlet weak var textviewMedicin: UITextView!
