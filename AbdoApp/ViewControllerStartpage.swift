@@ -14,7 +14,7 @@ class ViewControllerStartpage: UIViewController {
         changeButtonStyling(button: buttonOpret)
         changeButtonStyling(button: buttonSharecode)
         changeButtonStyling(button: buttonRestoreFromEmail)
-        labelAbdo.textColor = UIColor(red: 220/255.0, green: 91/255.0, blue: 33/255.0, alpha: 1)
+        labelAbdo.textColor = ColorScheme().barColor
     }
     
     func changeButtonStyling(button : UIButton)
@@ -23,8 +23,8 @@ class ViewControllerStartpage: UIViewController {
         button.layer.cornerRadius = 5
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.black.cgColor
-        button.backgroundColor = UIColor(red: 112/255, green: 171/255, blue: 143/255, alpha: 1)
-        button.titleLabel?.textColor = UIColor.white
+        button.backgroundColor = ColorScheme().buttonColor
+        button.titleLabel?.textColor = ColorScheme().buttonTextColor
         
     }
 

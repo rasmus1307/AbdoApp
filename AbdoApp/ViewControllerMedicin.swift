@@ -28,7 +28,7 @@ class ViewControllerMedicin: UIViewController, UITableViewDataSource, UITableVie
         let cell = UITableViewCell()
         let medicin = self.datasource[indexPath.row]
         var dosage = ""
-        if (medicin.dosage == ""){} else {dosage = "( \(medicin.dosage))"}
+        if (medicin.dosage == ""){} else {dosage = " (\(medicin.dosage))"}
         cell.textLabel?.text = "\(medicin.type)\(dosage)"
         return cell
     }

@@ -13,19 +13,31 @@ class ViewControllerCreate: UIViewController {
         let theChild = Singleton.SharedInstance.child[Singleton.SharedInstance.currentChildId]
         
         // updating text field regarding child info
-        if theChild.childInfo.name == "" {
+        if theChild.childInfo.name == "" && theChild.childInfo.birthdate == NSDate.minimumDate() {
             self.textviewStamdata.text = "Ingen stamdata indtastet"
-        } else
-        {
-            self.textviewStamdata.text = "\(theChild.childInfo.name)"
         }
+        else { self.textviewStamdata.text = "\(theChild.childInfo.name)\n"}
+        
+        if (theChild.childInfo.isFemale && theChild.childInfo.name != "") {
+            self.textviewStamdata.text.append("Pige\n")
+        }
+        if (!theChild.childInfo.isFemale && theChild.childInfo.name != "") {
+            self.textviewStamdata.text.append("Dreng\n")
+        }
+        
+        if theChild.childInfo.birthdate != NSDate.minimumDate() {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd. MMM yyyy"
+            let dateString = dateFormatter.string(from: theChild.childInfo.birthdate as Date)
+            self.textviewStamdata.text.append("\(dateString)")
+        } else {}
         
         // updating text field regarding medicin
         var medicinArray = [String]()
         for (medicin) in theChild.medicins
         {
             var dosage = ""
-            if (medicin.dosage == ""){} else {dosage = "( \(medicin.dosage))"}
+            if (medicin.dosage == ""){} else {dosage = " (\(medicin.dosage))"}
             medicinArray.append("\(medicin.type)\(dosage)")
         }
         if medicinArray.count == 0
@@ -54,6 +66,7 @@ class ViewControllerCreate: UIViewController {
         
         // updating text field regarding supplements
         self.textviewSupplement.text = "Ingen kosttilskud indtastet"
+        
         
         self.textviewStamdata.reloadInputViews()
         self.textviewMedicin.reloadInputViews()
