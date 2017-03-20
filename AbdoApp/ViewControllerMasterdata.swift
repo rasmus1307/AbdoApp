@@ -9,7 +9,7 @@ class ViewControllerMasterdata: UIViewController {
     @IBOutlet weak var datepickerBirthday: UIDatePicker!
 
     @IBAction func genderEdited(_ sender: UISegmentedControl) {
-        if self.selectedGender.description == "Pige" {
+        if self.selectedGender.selectedSegmentIndex == 0 {
             self.theChild.childInfo.isFemale = true
         } else {
             self.theChild.childInfo.isFemale = false
@@ -21,7 +21,7 @@ class ViewControllerMasterdata: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        theChild = Singleton.SharedInstance.child[Singleton.SharedInstance.currentChildId]
+        self.theChild = Singleton.SharedInstance.child[Singleton.SharedInstance.currentChildId]
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -42,6 +42,7 @@ class ViewControllerMasterdata: UIViewController {
         else {
             self.selectedGender.selectedSegmentIndex = 1
         }
+        self.textfieldName.becomeFirstResponder()
         
     }
 

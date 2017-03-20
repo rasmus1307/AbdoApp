@@ -22,13 +22,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Ingen allergier tilføjet" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="D67-3A-E8B">
-                                <rect key="frame" x="10" y="378" width="343" height="62.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVE-Oo-SY1">
                                 <rect key="frame" x="16" y="72" width="343" height="51"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -63,12 +56,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Ingen allergier tilføjet" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uhJ-EK-jHJ">
-                                <rect key="frame" x="16" y="385" width="343" height="60"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Ingen stamdata tilføjet" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xSa-z7-4t8">
                                 <rect key="frame" x="16" y="131" width="343" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -92,21 +79,25 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dik-TV-n5q">
-                                <rect key="frame" x="16" y="579" width="343" height="62.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Gem"/>
-                                <connections>
-                                    <segue destination="JQ6-vx-Epb" kind="show" id="PLQ-o2-kY1"/>
-                                </connections>
-                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Ingen allergier tilføjet" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JGt-lY-1cq">
+                                <rect key="frame" x="16" y="385" width="337" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Opret" id="jdD-JV-Ou6"/>
+                    <navigationItem key="navigationItem" title="Opret" id="jdD-JV-Ou6">
+                        <barButtonItem key="rightBarButtonItem" title="Gem" id="i82-ko-JFN">
+                            <connections>
+                                <segue destination="JQ6-vx-Epb" kind="show" id="CYr-J4-eYL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="textviewAllergies" destination="D67-3A-E8B" id="Up9-6C-Yta"/>
+                        <outlet property="textviewAllergies" destination="JGt-lY-1cq" id="vUv-5O-TZn"/>
                         <outlet property="textviewMedicin" destination="hct-uo-k2z" id="ivp-RS-5v9"/>
                         <outlet property="textviewStamdata" destination="xSa-z7-4t8" id="gM0-1d-Ma7"/>
                         <outlet property="textviewSupplement" destination="9wV-Is-7VI" id="cZs-oR-hjd"/>
@@ -362,7 +353,7 @@
             </objects>
             <point key="canvasLocation" x="1924" y="-2346"/>
         </scene>
-        <!--Startside-->
+        <!--abdo-->
         <scene sceneID="LGV-4g-KMn">
             <objects>
                 <viewController id="xX0-KT-4xu" customClass="ViewControllerStartpage" customModule="AbdoApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -407,13 +398,6 @@
                                     <segue destination="VDb-gc-H4E" kind="show" id="iwM-Oa-4YH"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ABDO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Bf-Ad-t2M">
-                                <rect key="frame" x="16" y="72" width="343" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -429,12 +413,11 @@
                             <constraint firstItem="n7L-8d-Tq6" firstAttribute="top" secondItem="HEj-2J-fga" secondAttribute="bottom" constant="20" id="qSn-Ug-w9i"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Startside" id="hAC-rs-0hq"/>
+                    <navigationItem key="navigationItem" title="abdo" id="hAC-rs-0hq"/>
                     <connections>
                         <outlet property="buttonOpret" destination="MLO-0e-Szs" id="k6K-5r-nG8"/>
                         <outlet property="buttonRestoreFromEmail" destination="n7L-8d-Tq6" id="pob-Q8-qMd"/>
                         <outlet property="buttonSharecode" destination="HEj-2J-fga" id="f2w-vB-cPB"/>
-                        <outlet property="labelAbdo" destination="1Bf-Ad-t2M" id="mjC-0d-lSS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5uC-BH-xQh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -465,14 +448,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NxK-wf-syL">
-                                <rect key="frame" x="16" y="599" width="343" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Gem"/>
-                                <connections>
-                                    <segue destination="JQ6-vx-Epb" kind="show" id="qO9-gU-3PK"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -480,14 +455,20 @@
                             <constraint firstAttribute="trailingMargin" secondItem="UIc-j3-TgO" secondAttribute="trailing" id="Afo-Bj-uJM"/>
                             <constraint firstItem="UIc-j3-TgO" firstAttribute="top" secondItem="0MK-Lm-WlN" secondAttribute="bottom" constant="20" id="IDM-Fq-m3C"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vZf-dq-Q3e" secondAttribute="trailing" id="K9s-x6-NfK"/>
-                            <constraint firstItem="Jlw-Jc-Xwn" firstAttribute="top" secondItem="NxK-wf-syL" secondAttribute="bottom" constant="20" id="Pvh-lY-Qzk"/>
-                            <constraint firstItem="NxK-wf-syL" firstAttribute="leading" secondItem="ecf-jz-dMR" secondAttribute="leadingMargin" id="g35-OS-gwp"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="NxK-wf-syL" secondAttribute="trailing" id="iD0-jM-zEp"/>
                             <constraint firstItem="UIc-j3-TgO" firstAttribute="leading" secondItem="ecf-jz-dMR" secondAttribute="leadingMargin" id="mmP-bG-Bel"/>
                             <constraint firstItem="vZf-dq-Q3e" firstAttribute="top" secondItem="UIc-j3-TgO" secondAttribute="bottom" constant="8" id="vc5-dV-Iz9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Delekode" id="q6s-AY-6AI"/>
+                    <navigationItem key="navigationItem" title="Delekode" id="q6s-AY-6AI">
+                        <barButtonItem key="rightBarButtonItem" title="Gem" id="VEJ-9U-ebg">
+                            <connections>
+                                <segue destination="JQ6-vx-Epb" kind="show" id="T6D-1U-kU1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textfieldSharecode" destination="vZf-dq-Q3e" id="Opz-95-Cf6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4EH-uN-2wM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -530,14 +511,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWf-gZ-vIV">
-                                <rect key="frame" x="16" y="599" width="343" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Gem"/>
-                                <connections>
-                                    <segue destination="JQ6-vx-Epb" kind="show" id="noj-g9-vag"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uH4-YD-KnO">
                                 <rect key="frame" x="16" y="121" width="343" height="30"/>
                                 <nil key="textColor"/>
@@ -547,9 +520,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="eWf-gZ-vIV" firstAttribute="trailing" secondItem="5ye-ZN-yFP" secondAttribute="trailingMargin" id="7QT-PK-fnm"/>
-                            <constraint firstItem="rSN-le-WIu" firstAttribute="top" secondItem="eWf-gZ-vIV" secondAttribute="bottom" constant="20" id="LxR-7a-mIR"/>
-                            <constraint firstItem="eWf-gZ-vIV" firstAttribute="leading" secondItem="5ye-ZN-yFP" secondAttribute="leadingMargin" id="Mh5-C4-fUH"/>
                             <constraint firstItem="uH4-YD-KnO" firstAttribute="leading" secondItem="5ye-ZN-yFP" secondAttribute="leadingMargin" id="PAv-gz-FOl"/>
                             <constraint firstItem="hnV-0o-6Cq" firstAttribute="trailing" secondItem="5ye-ZN-yFP" secondAttribute="trailingMargin" id="Ph0-8q-rh3"/>
                             <constraint firstItem="uH4-YD-KnO" firstAttribute="trailing" secondItem="5ye-ZN-yFP" secondAttribute="trailingMargin" id="V3Y-Hh-7aA"/>
@@ -558,7 +528,16 @@
                             <constraint firstItem="hnV-0o-6Cq" firstAttribute="top" secondItem="5zb-f9-n8i" secondAttribute="bottom" constant="20" id="oXM-eG-qMy"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Gendan fra email" id="bHj-cg-oOI"/>
+                    <navigationItem key="navigationItem" title="Gendan fra email" id="bHj-cg-oOI">
+                        <barButtonItem key="rightBarButtonItem" title="Gem" id="nod-mz-Hwi">
+                            <connections>
+                                <segue destination="JQ6-vx-Epb" kind="show" id="RG6-p9-iuj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textfieldEmail" destination="uH4-YD-KnO" id="j0u-oI-a44"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sm5-EV-5uh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -739,8 +718,8 @@
         <segue reference="gdy-8d-QLW"/>
         <segue reference="b4w-hF-7pZ"/>
         <segue reference="iwM-Oa-4YH"/>
+        <segue reference="RG6-p9-iuj"/>
         <segue reference="24s-6I-QAE"/>
-        <segue reference="PLQ-o2-kY1"/>
         <segue reference="KBL-vN-mcP"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -14,7 +14,6 @@ class ViewControllerStartpage: UIViewController {
         changeButtonStyling(button: buttonOpret)
         changeButtonStyling(button: buttonSharecode)
         changeButtonStyling(button: buttonRestoreFromEmail)
-        labelAbdo.textColor = ColorScheme().barColor
     }
     
     func changeButtonStyling(button : UIButton)

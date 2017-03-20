@@ -30,11 +30,11 @@ class ViewControllerCreate: UIViewController {
             dateFormatter.dateFormat = "dd. MMM yyyy"
             let dateString = dateFormatter.string(from: theChild.childInfo.birthdate as Date)
             self.textviewStamdata.text.append("\(dateString)")
-        } else {}
+        }
         
         // updating text field regarding medicin
         var medicinArray = [String]()
-        for (medicin) in theChild.medicins
+        for medicin in theChild.medicins
         {
             var dosage = ""
             if (medicin.dosage == ""){} else {dosage = " (\(medicin.dosage))"}
@@ -49,29 +49,37 @@ class ViewControllerCreate: UIViewController {
         }
         
         // updating text field regarding allergies
-        self.textviewAllergies.text = "Ingen allergier indtastet"
-//        var allergyArray = [String]()
-//        for allergy in theChild.allergies
-//        {
-//            allergyArray.append(allergy.)
-//        }
-//        if allergyArray.count == 0
-//        {
-//            self.textviewAllergies.text = "Ingen allergier indtastet"
-//        } else
-//        {
-//            self.textviewAllergies.text = medicinArray.joined(separator: ", ")
-//        }
-        
+        var allergyArray = [String]()
+        for allergy in theChild.allergies
+        {
+            allergyArray.append("\(allergy.key )")
+        }
+        if allergyArray.count == 0
+        {
+            self.textviewAllergies.text = "Ingen allergier indtastet"
+        } else
+        {
+            print(allergyArray)
+            self.textviewAllergies.text = allergyArray.joined(separator: ", ")
+        }
         
         // updating text field regarding supplements
-        self.textviewSupplement.text = "Ingen kosttilskud indtastet"
+        var supplementArray = [String]()
+        for supplement in theChild.supplements
+        {
+            supplementArray.append("\(supplement.key)")
+        }
+        if supplementArray.count == 0
+        {
+            self.textviewSupplement.text = "Ingen kosttilskud indtastet"
+        } else
+        {
+            print(supplementArray)
+            self.textviewSupplement.text = supplementArray.joined(separator: ", ")
+        }
         
-        
-        self.textviewStamdata.reloadInputViews()
-        self.textviewMedicin.reloadInputViews()
-        self.textviewAllergies.reloadInputViews()
-        self.textviewSupplement.reloadInputViews()
+        // reloading the text views
+        self.view.reloadInputViews()
     }
     
     override func viewDidLoad() {

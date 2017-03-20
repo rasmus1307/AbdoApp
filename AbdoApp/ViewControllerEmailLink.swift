@@ -2,26 +2,12 @@ import UIKit
 
 class ViewControllerEmailLink: UIViewController {
 
+    @IBOutlet weak var textfieldEmail: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = ColorScheme().backgroundColor
-        self.hideKeyboardWhenTappedAround()
+        self.textfieldEmail.becomeFirstResponder()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
