@@ -18,8 +18,8 @@ class ViewControllerStartpage: UIViewController {
     
     func changeButtonStyling(button : UIButton)
     {
-        button.backgroundColor = .clear
-        button.layer.cornerRadius = 5
+        //button.backgroundColor = .clear
+        //button.layer.cornerRadius = 5
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.black.cgColor
         button.backgroundColor = ColorScheme().buttonColor

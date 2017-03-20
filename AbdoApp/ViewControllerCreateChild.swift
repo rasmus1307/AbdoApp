@@ -47,19 +47,26 @@ class ViewControllerCreateChild: UIViewController, UITableViewDataSource, UITabl
         return headerView
     }
     
-    func pressed(sender: UIButton!) {
-        switch sender.accessibilityLabel! {
+    func pressed(sender: UIButton!)
+    {
+        changeView(receivedString: sender.accessibilityLabel, indexPath: sender)
+    }
+    
+    func changeView(receivedString : String!, indexPath: Any?)
+    {
+        switch receivedString
+        {
         case "Stamdata":
-            performSegue(withIdentifier: "showMasterdata", sender: sender)
+            performSegue(withIdentifier: "showMasterdata", sender: indexPath)
             return
         case "Medicin":
-            performSegue(withIdentifier: "showMedicin", sender: sender)
+            performSegue(withIdentifier: "showMedicin", sender: indexPath)
             return
         case "Allergier":
-            performSegue(withIdentifier: "showAllergies", sender: sender)
+            performSegue(withIdentifier: "showAllergies", sender: indexPath)
             return
         case "Kosttilskud":
-            performSegue(withIdentifier: "showSupplements", sender: sender)
+            performSegue(withIdentifier: "showSupplements", sender: indexPath)
             return
         default:
             return
@@ -122,6 +129,18 @@ class ViewControllerCreateChild: UIViewController, UITableViewDataSource, UITabl
         }
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        // adding checkmark to row
+        if let cell = tableView.cellForRow(at: indexPath)
+        {
+            changeView(receivedString: self.sectionTitles[indexPath.section], indexPath: indexPath)
+            cell.isSelected = false
+            cell.isHighlighted = false
+        }
+        self.tableView.reloadData()
+    }
 
 //    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
 //        return true
@@ -145,6 +164,8 @@ class ViewControllerCreateChild: UIViewController, UITableViewDataSource, UITabl
 //        
 //        return [share, favorite, more]
 //    }
+    
+    
     
     override func viewWillAppear(_ animated: Bool)
     {
