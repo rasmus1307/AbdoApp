@@ -4,7 +4,7 @@ class ViewControllerMedicinAdd: UIViewController {
 
     @IBOutlet weak var medicinType: UITextField!
     @IBOutlet weak var medicinDosage: UITextField!
-    
+    var segueMedicin = ChildMedicin()
     
     @IBAction func medicinSave(_ sender: UIBarButtonItem) {
         if (self.medicinType.text == "") {
@@ -22,13 +22,22 @@ class ViewControllerMedicinAdd: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = ColorScheme().backgroundColor
         self.medicinType.becomeFirstResponder()
+        self.medicinType.text = self.segueMedicin.type
+        self.medicinDosage.text = self.segueMedicin.dosage
     }
     
     func singletonSaveMedicin(medicinType : String?, medicinDosage : String?) {
-        let medicin = ChildMedicin()
-        medicin.type = medicinType ?? ""
-        medicin.dosage = medicinDosage ?? ""
-        Singleton.SharedInstance.child[Singleton.SharedInstance.currentChildId].medicins.append(medicin)
+        if segueMedicin.type == "" {
+            let medicin = ChildMedicin()
+            medicin.type = medicinType ?? ""
+            medicin.dosage = medicinDosage ?? ""
+            Singleton.SharedInstance.child[Singleton.SharedInstance.currentChildId].medicins.append(medicin)
+        }
+        else
+        {
+            segueMedicin.type = medicinType ?? ""
+            segueMedicin.dosage = medicinDosage ?? ""
+        }
     }
 
 }

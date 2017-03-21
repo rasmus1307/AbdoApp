@@ -2,17 +2,48 @@ import UIKit
 
 class ViewControllerSupplement: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
     let theChild = Singleton.SharedInstance.child[Singleton.SharedInstance.currentChildId]
     
     var datasource : [Supplement] = Singleton.SharedInstance.supplements
     
-    // Title for the table view
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
-    {
-        return "Vælg kosttilskud"
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        
+        headerView.frame = CGRect(x: 0, y: 0, width: view.bounds.size.width, height: 45)
+        //        headerView.backgroundColor = ColorScheme().buttonColor
+        changeViewStyling(view : headerView)
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.text = "Vælg kosttilskud"
+        label.textColor = ColorScheme().buttonTextColor
+        label.frame = CGRect(x: 5, y: 5, width: view.bounds.size.width, height: 35)
+        headerView.addSubview(label)
+        
+        return headerView
     }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 45
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = ColorScheme().backgroundColor
+        return view
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 8
+    }
+    
+//    // Title for the table view
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
+//    {
+//        return "Vælg kosttilskud"
+//    }
     
     // How many sections in the table view
     func numberOfSections(in tableView: UITableView) -> Int
@@ -68,7 +99,9 @@ class ViewControllerSupplement: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        view.backgroundColor = ColorScheme().backgroundColor
+        //view.backgroundColor = ColorScheme().backgroundColor
+        self.backgroundView.backgroundColor = ColorScheme().backgroundColor
+        self.tableView.backgroundColor = ColorScheme().backgroundColor
         self.tableView.delegate = self
         self.tableView.dataSource = self
     }

@@ -11,7 +11,7 @@ class ViewControllerCreateChild: UIViewController, UITableViewDataSource, UITabl
     let sectionTitles = ["Stamdata", "Medicin", "Allergier", "Kosttilskud"]
     
     var stamdata = [String]()
-    var medicin = [String]()
+    var medicin = [ChildMedicin]()
     var allergies = [String]()
     var supplements = [String]()
     
@@ -23,7 +23,13 @@ class ViewControllerCreateChild: UIViewController, UITableViewDataSource, UITabl
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
         headerView.frame = CGRect(x: 0, y: 0, width: view.bounds.size.width, height: 45)
-        headerView.backgroundColor = ColorScheme().buttonColor
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(self.pressed(sender:)))
+        gesture.accessibilityLabel = sectionTitles[section]
+        headerView.addGestureRecognizer(gesture)
+
+//        headerView.backgroundColor = ColorScheme().buttonColor
+        changeViewStyling(view : headerView)
         
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 18)
@@ -33,13 +39,9 @@ class ViewControllerCreateChild: UIViewController, UITableViewDataSource, UITabl
         headerView.addSubview(label)
         
         let button = UIButton()
-        button.setTitle("+", for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 24)
-        //button.titleLabel?.textAlignment = .center
         button.frame = CGRect(x: headerView.bounds.size.width - 50, y: 5, width: 35, height: 35)
         button.layer.cornerRadius = 0.5 * button.bounds.size.width
-        button.layer.borderWidth = 2
-        button.layer.borderColor = ColorScheme().buttonTextColor.cgColor
+        button.setImage(#imageLiteral(resourceName: "PencilWhite64"), for: .normal)
         button.accessibilityLabel = sectionTitles[section]
         button.addTarget(self, action: #selector(self.pressed(sender:)), for: .touchUpInside)
         headerView.addSubview(button)
@@ -47,36 +49,11 @@ class ViewControllerCreateChild: UIViewController, UITableViewDataSource, UITabl
         return headerView
     }
     
-    func pressed(sender: UIButton!)
-    {
-        changeView(receivedString: sender.accessibilityLabel, indexPath: sender)
-    }
-    
-    func changeView(receivedString : String!, indexPath: Any?)
-    {
-        switch receivedString
-        {
-        case "Stamdata":
-            performSegue(withIdentifier: "showMasterdata", sender: indexPath)
-            return
-        case "Medicin":
-            performSegue(withIdentifier: "showMedicin", sender: indexPath)
-            return
-        case "Allergier":
-            performSegue(withIdentifier: "showAllergies", sender: indexPath)
-            return
-        case "Kosttilskud":
-            performSegue(withIdentifier: "showSupplements", sender: indexPath)
-            return
-        default:
-            return
-        }
-    }
-    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 45
     }
     
+    // Setting up the footer
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let view = UIView()
         view.backgroundColor = ColorScheme().backgroundColor
@@ -84,7 +61,50 @@ class ViewControllerCreateChild: UIViewController, UITableViewDataSource, UITabl
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 8
+        return 12
+    }
+    
+    // Function called when a Plus button is pressed
+    func pressed(sender: UITapGestureRecognizer)
+    {
+        changeView(receivedString: sender.accessibilityLabel, sender: sender)
+    }
+    
+    // Sending the user to the wanted view
+    // Can be istantiated by tableview header title plus button
+    // Or by clicking one of the rows
+    func changeView(receivedString : String!, sender: Any?)
+    {
+        switch receivedString
+        {
+        case "Stamdata":
+            performSegue(withIdentifier: "showMasterdata", sender: sender)
+            return
+        case "Medicin":
+            performSegue(withIdentifier: "showMedicin", sender: sender)
+            return
+        case "Allergier":
+            performSegue(withIdentifier: "showAllergies", sender: sender)
+            return
+        case "Kosttilskud":
+            performSegue(withIdentifier: "showSupplements", sender: sender)
+            return
+        default:
+            return
+        }
+    }
+    
+    // Pass selected medicin data to ViewControllerMedicinAdd
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "showMedicin") {
+            let medicinViewController = segue.destination as! ViewControllerMedicinAdd
+            if let indexPath = sender as? IndexPath {
+                medicinViewController.segueMedicin = self.medicin[indexPath.row]
+            }
+            else
+            {
+            }
+        }
     }
     
     // How many rows in the table view
@@ -102,7 +122,6 @@ class ViewControllerCreateChild: UIViewController, UITableViewDataSource, UITabl
         default:
             return 0
         }
-
     }
     
     // Adding cell data to table view
@@ -114,15 +133,25 @@ class ViewControllerCreateChild: UIViewController, UITableViewDataSource, UITabl
         {
             case 0:
                 let stamdataItem = self.stamdata[indexPath.row]
+                cell.selectionStyle = .none
                 cell.textLabel?.text = stamdataItem
             case 1:
-                let medicinItem = self.medicin[indexPath.row]
-                cell.textLabel?.text = medicinItem
+                var medicinDosage = ""
+                if self.medicin[indexPath.row].dosage == "" {} else {medicinDosage = " (\(medicin[indexPath.row].dosage))"}
+                let medicinItem = self.medicin[indexPath.row].type
+                cell.textLabel?.text = "\(medicinItem)\(medicinDosage)"
+                let image = UIImage(named: "PencilGreen")
+                let imageView = UIImageView(image: image!)
+                imageView.frame = CGRect(x: cell.bounds.size.width, y: 5, width: 35, height: 35)
+                imageView.tintColor = ColorScheme().buttonColor
+                cell.addSubview(imageView)
             case 2:
                 let allergyItem = self.allergies[indexPath.row]
+                cell.selectionStyle = .none
                 cell.textLabel?.text = allergyItem
             case 3:
                 let supplementItem = self.supplements[indexPath.row]
+                cell.selectionStyle = .none
                 cell.textLabel?.text = supplementItem
             default:
                 cell.textLabel?.text = ""
@@ -130,16 +159,18 @@ class ViewControllerCreateChild: UIViewController, UITableViewDataSource, UITabl
         return cell
     }
     
+    // linking a row/section to the correct edit view
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        // adding checkmark to row
-        if let cell = tableView.cellForRow(at: indexPath)
-        {
-            changeView(receivedString: self.sectionTitles[indexPath.section], indexPath: indexPath)
-            cell.isSelected = false
-            cell.isHighlighted = false
+        if indexPath.section == 1 {
+            if let cell = tableView.cellForRow(at: indexPath)
+            {
+                changeView(receivedString: self.sectionTitles[indexPath.section], sender: indexPath)
+                cell.isSelected = false
+                cell.isHighlighted = false
+            }
+            self.tableView.reloadData()
         }
-        self.tableView.reloadData()
     }
 
 //    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -147,30 +178,28 @@ class ViewControllerCreateChild: UIViewController, UITableViewDataSource, UITabl
 //    }
 //    
 //    func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
-//        let more = UITableViewRowAction(style: .normal, title: "More") { action, index in
-//            print("more button tapped")
+//        let edit = UITableViewRowAction(style: .normal, title: "Ret") { action, index in
+//            print("edit button tapped")
 //        }
-//        more.backgroundColor = .lightGray
+//        edit.backgroundColor = .orange
 //        
-//        let favorite = UITableViewRowAction(style: .normal, title: "Favorite") { action, index in
-//            print("favorite button tapped")
+//        let delete = UITableViewRowAction(style: .normal, title: "Slet") { action, index in
+//            print("delete button tapped")
 //        }
-//        favorite.backgroundColor = .orange
+//        delete.backgroundColor = .red
 //        
-//        let share = UITableViewRowAction(style: .normal, title: "Share") { action, index in
-//            print("share button tapped")
-//        }
-//        share.backgroundColor = .blue
-//        
-//        return [share, favorite, more]
+//        return [delete, edit]
 //    }
     
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationItem.title = "Tilbage"
+    }
     
     override func viewWillAppear(_ animated: Bool)
     {
+        self.navigationItem.title = "Registrer barn"
         self.stamdata = self.theChild.convertChildInfoToArray()
-        self.medicin = self.theChild.convertMedicinToArray()
+        self.medicin = self.theChild.medicins
         self.allergies = Array(self.theChild.allergies.keys)
         self.supplements = Array(self.theChild.supplements.keys)
         self.theChild = Singleton.SharedInstance.child[Singleton.SharedInstance.currentChildId]
