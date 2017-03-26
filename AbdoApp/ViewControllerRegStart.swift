@@ -2,18 +2,19 @@ import UIKit
 
 class ViewControllerRegStart: UIViewController {
 
-    @IBOutlet weak var textBubble: UITextView!
+
+    @IBOutlet weak var viewHeader: UIView!
     @IBOutlet weak var head: UIButton!
     @IBOutlet weak var upperBody: UIButton!
     @IBOutlet weak var lowerBody: UIButton!
     
-    @IBAction func buttonHead(_ sender: UIButton) {
+    @IBAction func painAreaClicked(_ sender: UIButton) {
+        changeView(sender: sender)
     }
     
-    @IBAction func buttonUpperBody(_ sender: UIButton) {
-    }
-    
-    @IBAction func buttonLowerBody(_ sender: UIButton) {
+    func changeView(sender: UIButton)
+    {
+        performSegue(withIdentifier: "showPain", sender: sender)
     }
     
     func buttonBorder(button : UIButton) {
@@ -25,13 +26,11 @@ class ViewControllerRegStart: UIViewController {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
         self.view.backgroundColor = ColorScheme().backgroundColor
-        self.textBubble.backgroundColor = UIColor.white
-        self.textBubble.layer.borderWidth = 2
-        self.textBubble.layer.borderColor = UIColor.black.cgColor
+        self.viewHeader.backgroundColor = ColorScheme().barColor
+        self.viewHeader.tintColor = ColorScheme().tintColor
         buttonBorder(button: head)
         buttonBorder(button: upperBody)
         buttonBorder(button: lowerBody)
     }
 
-    
 }

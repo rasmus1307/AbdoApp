@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewControllerPoo: UIViewController {
+class ViewControllerFood: UIViewController {
 
     @IBOutlet weak var viewHeader: UIView!
     
@@ -11,6 +11,7 @@ class ViewControllerPoo: UIViewController {
     @IBAction func buttonCancel(_ sender: UIButton) {
         changeView(sender: sender)
     }
+    
     
     func changeView(sender: UIButton)
     {

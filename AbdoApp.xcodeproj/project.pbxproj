@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		903250F0F44A1540767C711D /* Pods_AbdoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B816E77052CBBBCC25F8A2 /* Pods_AbdoAppTests.framework */; };
 		B8746F562FB02E574FD66C72 /* Pods_AbdoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95F2A7FC5D01A63E8DE379D /* Pods_AbdoApp.framework */; };
+		CB22719D1E8834A3000B7E93 /* ViewControllerSleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB22719C1E8834A3000B7E93 /* ViewControllerSleep.swift */; };
+		CB22719F1E8834BC000B7E93 /* ViewControllerMood.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB22719E1E8834BC000B7E93 /* ViewControllerMood.swift */; };
+		CB2271A11E8834D2000B7E93 /* ViewControllerExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2271A01E8834D2000B7E93 /* ViewControllerExercise.swift */; };
+		CB2271A31E8834F4000B7E93 /* ViewControllerFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2271A21E8834F4000B7E93 /* ViewControllerFood.swift */; };
 		CB23C7131E75FC420046E5DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB23C7121E75FC420046E5DF /* AppDelegate.swift */; };
-		CB23C7151E75FC420046E5DF /* ViewControllerCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB23C7141E75FC420046E5DF /* ViewControllerCreate.swift */; };
 		CB23C7181E75FC420046E5DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB23C7161E75FC420046E5DF /* Main.storyboard */; };
 		CB23C71B1E75FC420046E5DF /* AbdoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB23C7191E75FC420046E5DF /* AbdoApp.xcdatamodeld */; };
 		CB23C71D1E75FC420046E5DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB23C71C1E75FC420046E5DF /* Assets.xcassets */; };
@@ -42,6 +45,7 @@
 		CBB4AB8C1E81F2D700C29C08 /* ViewControllerPain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4AB8B1E81F2D700C29C08 /* ViewControllerPain.swift */; };
 		CBB4AB8E1E81F30800C29C08 /* ViewControllerOtherRegs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4AB8D1E81F30800C29C08 /* ViewControllerOtherRegs.swift */; };
 		CBB4AB901E81F33600C29C08 /* ViewControllerPoo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4AB8F1E81F33600C29C08 /* ViewControllerPoo.swift */; };
+		CBB4AB921E832CB100C29C08 /* ViewControllerRegEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4AB911E832CB100C29C08 /* ViewControllerRegEnd.swift */; };
 		CBB62EA01E776F8E005C9FEC /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB62E9F1E776F8E005C9FEC /* Singleton.swift */; };
 		CBB62EA21E777744005C9FEC /* PainPlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB62EA11E777744005C9FEC /* PainPlacement.swift */; };
 		CBB62EA41E77777D005C9FEC /* Sleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB62EA31E77777D005C9FEC /* Sleep.swift */; };
@@ -49,7 +53,6 @@
 		CBB62EA81E7830A5005C9FEC /* CloseKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB62EA71E7830A5005C9FEC /* CloseKeyboard.swift */; };
 		CBB62EAB1E784233005C9FEC /* ViewControllerStartpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB62EAA1E784233005C9FEC /* ViewControllerStartpage.swift */; };
 		CBB62EAD1E78427B005C9FEC /* ViewControllerMasterdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB62EAC1E78427B005C9FEC /* ViewControllerMasterdata.swift */; };
-		CBB62EAF1E784376005C9FEC /* ViewControllerMedicin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB62EAE1E784376005C9FEC /* ViewControllerMedicin.swift */; };
 		CBB62EB11E7843C2005C9FEC /* ViewControllerSharecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB62EB01E7843C2005C9FEC /* ViewControllerSharecode.swift */; };
 		CBB62EB31E7843DE005C9FEC /* ViewControllerEmailLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB62EB21E7843DE005C9FEC /* ViewControllerEmailLink.swift */; };
 		CBB62EB51E78446D005C9FEC /* ViewControllerAllergy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB62EB41E78446D005C9FEC /* ViewControllerAllergy.swift */; };
@@ -73,9 +76,12 @@
 		9F4051156F7B3251EED22473 /* Pods-AbdoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AbdoAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AbdoAppTests/Pods-AbdoAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		AED9540F71949B9C2FF299E1 /* Pods-AbdoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AbdoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AbdoApp/Pods-AbdoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B8B816E77052CBBBCC25F8A2 /* Pods_AbdoAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AbdoAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB22719C1E8834A3000B7E93 /* ViewControllerSleep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerSleep.swift; sourceTree = "<group>"; };
+		CB22719E1E8834BC000B7E93 /* ViewControllerMood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerMood.swift; sourceTree = "<group>"; };
+		CB2271A01E8834D2000B7E93 /* ViewControllerExercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExercise.swift; sourceTree = "<group>"; };
+		CB2271A21E8834F4000B7E93 /* ViewControllerFood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerFood.swift; sourceTree = "<group>"; };
 		CB23C70F1E75FC420046E5DF /* AbdoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbdoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB23C7121E75FC420046E5DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CB23C7141E75FC420046E5DF /* ViewControllerCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCreate.swift; sourceTree = "<group>"; };
 		CB23C7171E75FC420046E5DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB23C71A1E75FC420046E5DF /* AbdoApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AbdoApp.xcdatamodel; sourceTree = "<group>"; };
 		CB23C71C1E75FC420046E5DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,6 +114,7 @@
 		CBB4AB8B1E81F2D700C29C08 /* ViewControllerPain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPain.swift; sourceTree = "<group>"; };
 		CBB4AB8D1E81F30800C29C08 /* ViewControllerOtherRegs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerOtherRegs.swift; sourceTree = "<group>"; };
 		CBB4AB8F1E81F33600C29C08 /* ViewControllerPoo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPoo.swift; sourceTree = "<group>"; };
+		CBB4AB911E832CB100C29C08 /* ViewControllerRegEnd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerRegEnd.swift; sourceTree = "<group>"; };
 		CBB62E9F1E776F8E005C9FEC /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		CBB62EA11E777744005C9FEC /* PainPlacement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PainPlacement.swift; sourceTree = "<group>"; };
 		CBB62EA31E77777D005C9FEC /* Sleep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sleep.swift; sourceTree = "<group>"; };
@@ -115,7 +122,6 @@
 		CBB62EA71E7830A5005C9FEC /* CloseKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseKeyboard.swift; sourceTree = "<group>"; };
 		CBB62EAA1E784233005C9FEC /* ViewControllerStartpage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerStartpage.swift; sourceTree = "<group>"; };
 		CBB62EAC1E78427B005C9FEC /* ViewControllerMasterdata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerMasterdata.swift; sourceTree = "<group>"; };
-		CBB62EAE1E784376005C9FEC /* ViewControllerMedicin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerMedicin.swift; sourceTree = "<group>"; };
 		CBB62EB01E7843C2005C9FEC /* ViewControllerSharecode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerSharecode.swift; sourceTree = "<group>"; };
 		CBB62EB21E7843DE005C9FEC /* ViewControllerEmailLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerEmailLink.swift; sourceTree = "<group>"; };
 		CBB62EB41E78446D005C9FEC /* ViewControllerAllergy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerAllergy.swift; sourceTree = "<group>"; };
@@ -280,6 +286,11 @@
 				CBB4AB8B1E81F2D700C29C08 /* ViewControllerPain.swift */,
 				CBB4AB8D1E81F30800C29C08 /* ViewControllerOtherRegs.swift */,
 				CBB4AB8F1E81F33600C29C08 /* ViewControllerPoo.swift */,
+				CB2271A21E8834F4000B7E93 /* ViewControllerFood.swift */,
+				CB22719C1E8834A3000B7E93 /* ViewControllerSleep.swift */,
+				CB22719E1E8834BC000B7E93 /* ViewControllerMood.swift */,
+				CB2271A01E8834D2000B7E93 /* ViewControllerExercise.swift */,
+				CBB4AB911E832CB100C29C08 /* ViewControllerRegEnd.swift */,
 			);
 			name = RegistrationProcess;
 			sourceTree = "<group>";
@@ -287,12 +298,10 @@
 		CBA4B3571E81D7FA00ECBFF5 /* CreateProcess */ = {
 			isa = PBXGroup;
 			children = (
-				CB23C7141E75FC420046E5DF /* ViewControllerCreate.swift */,
 				CB5A309B1E802787000D4EA6 /* ViewControllerCreateChild.swift */,
 				CBB62EB41E78446D005C9FEC /* ViewControllerAllergy.swift */,
 				CBB62EB21E7843DE005C9FEC /* ViewControllerEmailLink.swift */,
 				CBB62EAC1E78427B005C9FEC /* ViewControllerMasterdata.swift */,
-				CBB62EAE1E784376005C9FEC /* ViewControllerMedicin.swift */,
 				CBB62EBA1E787B0F005C9FEC /* ViewControllerMedicinAdd.swift */,
 				CBB62EB01E7843C2005C9FEC /* ViewControllerSharecode.swift */,
 				CBB62EAA1E784233005C9FEC /* ViewControllerStartpage.swift */,
@@ -548,14 +557,15 @@
 				CB6D5D421E76006400D36853 /* Supplement.swift in Sources */,
 				CBB4AB901E81F33600C29C08 /* ViewControllerPoo.swift in Sources */,
 				CB6D5D2F1E76000400D36853 /* NSDateExtension.swift in Sources */,
-				CB23C7151E75FC420046E5DF /* ViewControllerCreate.swift in Sources */,
 				CBB62EB51E78446D005C9FEC /* ViewControllerAllergy.swift in Sources */,
-				CBB62EAF1E784376005C9FEC /* ViewControllerMedicin.swift in Sources */,
 				CBB62EA81E7830A5005C9FEC /* CloseKeyboard.swift in Sources */,
+				CB2271A31E8834F4000B7E93 /* ViewControllerFood.swift in Sources */,
 				CB5A309C1E802787000D4EA6 /* ViewControllerCreateChild.swift in Sources */,
+				CB22719D1E8834A3000B7E93 /* ViewControllerSleep.swift in Sources */,
 				CBB62EA01E776F8E005C9FEC /* Singleton.swift in Sources */,
 				CBB4AB8C1E81F2D700C29C08 /* ViewControllerPain.swift in Sources */,
 				CB6D5D401E76006400D36853 /* Registration.swift in Sources */,
+				CB22719F1E8834BC000B7E93 /* ViewControllerMood.swift in Sources */,
 				CB6D5D2C1E75FFDB00D36853 /* ShareCodeAPI.swift in Sources */,
 				CB6D5D531E7600AA00D36853 /* PainLevel.swift in Sources */,
 				CB23C71B1E75FC420046E5DF /* AbdoApp.xcdatamodeld in Sources */,
@@ -563,6 +573,7 @@
 				CB6D5D2B1E75FFDB00D36853 /* API.swift in Sources */,
 				CBB62EB71E78449E005C9FEC /* ViewControllerSupplement.swift in Sources */,
 				CBB62EBB1E787B0F005C9FEC /* ViewControllerMedicinAdd.swift in Sources */,
+				CBB4AB921E832CB100C29C08 /* ViewControllerRegEnd.swift in Sources */,
 				CBB4AB8E1E81F30800C29C08 /* ViewControllerOtherRegs.swift in Sources */,
 				CB6D5D4F1E7600AA00D36853 /* Activity.swift in Sources */,
 				CBB62EA21E777744005C9FEC /* PainPlacement.swift in Sources */,
@@ -585,6 +596,7 @@
 				CB6BB69D1E7C89890058585A /* DataSingleton.swift in Sources */,
 				CB6D5D511E7600AA00D36853 /* FoodCategory.swift in Sources */,
 				CBB62EA41E77777D005C9FEC /* Sleep.swift in Sources */,
+				CB2271A11E8834D2000B7E93 /* ViewControllerExercise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,6 +736,7 @@
 			baseConfigurationReference = AED9540F71949B9C2FF299E1 /* Pods-AbdoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 6W3S8GJV92;
 				INFOPLIST_FILE = AbdoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -738,6 +751,7 @@
 			baseConfigurationReference = 14B3DF6387F266ADE711CD27 /* Pods-AbdoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 6W3S8GJV92;
 				INFOPLIST_FILE = AbdoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

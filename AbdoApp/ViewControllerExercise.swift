@@ -1,16 +1,17 @@
 import UIKit
 
-class ViewControllerPoo: UIViewController {
+class ViewControllerExercise: UIViewController {
 
     @IBOutlet weak var viewHeader: UIView!
+    
+    @IBAction func buttonCancel(_ sender: UIButton) {
+        changeView(sender: sender)
+    }
     
     @IBAction func buttonConfirm(_ sender: UIButton) {
         changeView(sender: sender)
     }
     
-    @IBAction func buttonCancel(_ sender: UIButton) {
-        changeView(sender: sender)
-    }
     
     func changeView(sender: UIButton)
     {

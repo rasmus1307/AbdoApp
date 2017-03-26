@@ -39,7 +39,7 @@ class ViewControllerCreateChild: UIViewController, UITableViewDataSource, UITabl
         headerView.addSubview(label)
         
         let button = UIButton()
-        button.frame = CGRect(x: headerView.bounds.size.width - 50, y: 5, width: 35, height: 35)
+        button.frame = CGRect(x: headerView.bounds.size.width - 50, y: 5, width: 25, height: 25)
         button.layer.cornerRadius = 0.5 * button.bounds.size.width
         button.setImage(#imageLiteral(resourceName: "PencilWhite64"), for: .normal)
         button.accessibilityLabel = sectionTitles[section]

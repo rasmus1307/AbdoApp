@@ -2,10 +2,14 @@ import UIKit
 
 class ViewControllerOtherRegs: UIViewController {
 
+    @IBOutlet weak var viewHeader: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = ColorScheme().backgroundColor
+        self.viewHeader.backgroundColor = ColorScheme().barColor
+        self.viewHeader.tintColor = ColorScheme().tintColor
     }
 
 }
