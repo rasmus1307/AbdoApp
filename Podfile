@@ -8,6 +8,7 @@ target 'AbdoApp' do
   # Pods for AbdoApp
 	pod 'Alamofire', '~> 4.4'
 	pod 'SwiftyJSON'
+	pod 'SAConfettiView'
 
   target 'AbdoAppTests' do
     inherit! :search_paths
