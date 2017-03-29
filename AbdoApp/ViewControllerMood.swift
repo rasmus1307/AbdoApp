@@ -5,17 +5,16 @@ class ViewControllerMood: UIViewController {
     @IBOutlet weak var viewHeader: UIView!
     
     @IBAction func buttonCancel(_ sender: UIButton) {
-        changeView(sender: sender)
+        popView()
     }
     
     @IBAction func buttonConfirm(_ sender: UIButton) {
-        changeView(sender: sender)
+        popView()
     }
     
     
-    func changeView(sender: UIButton)
-    {
-        performSegue(withIdentifier: "showOthers", sender: sender)
+    func popView(){
+        _ = self.navigationController?.popViewController(animated: true)
     }
     
     override func viewDidLoad() {

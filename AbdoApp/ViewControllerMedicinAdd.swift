@@ -2,6 +2,10 @@ import UIKit
 
 class ViewControllerMedicinAdd: UIViewController {
 
+    @IBOutlet weak var imageHeader: UIImageView!
+    @IBOutlet weak var imageMedicine: UIImageView!
+    @IBOutlet weak var imageDosage: UIImageView!
+    
     @IBOutlet weak var medicinType: UITextField!
     @IBOutlet weak var medicinDosage: UITextField!
     var segueMedicin = ChildMedicin()
@@ -20,10 +24,17 @@ class ViewControllerMedicinAdd: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = ColorScheme().backgroundColor
+        view.backgroundColor = ColorScheme().beige
         self.medicinType.becomeFirstResponder()
         self.medicinType.text = self.segueMedicin.type
         self.medicinDosage.text = self.segueMedicin.dosage
+        
+        imageHeader.image = UIImage(named: "icon_medicine")?.withRenderingMode(.alwaysTemplate)
+        imageHeader.tintColor = ColorScheme().blue
+        imageMedicine.image = UIImage(named: "icon_meds")?.withRenderingMode(.alwaysTemplate)
+        imageMedicine.tintColor = ColorScheme().blue
+        imageDosage.image = UIImage(named: "icon_dosage")?.withRenderingMode(.alwaysTemplate)
+        imageDosage.tintColor = ColorScheme().blue
     }
     
     func singletonSaveMedicin(medicinType : String?, medicinDosage : String?) {

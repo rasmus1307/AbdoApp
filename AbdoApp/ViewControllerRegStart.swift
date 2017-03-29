@@ -24,7 +24,7 @@ class ViewControllerRegStart: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.isNavigationBarHidden = false
         self.view.backgroundColor = ColorScheme().backgroundColor
         self.viewHeader.backgroundColor = ColorScheme().barColor
         self.viewHeader.tintColor = ColorScheme().tintColor

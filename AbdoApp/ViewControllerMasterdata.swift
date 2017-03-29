@@ -4,6 +4,11 @@ class ViewControllerMasterdata: UIViewController {
     
     var theChild = Singleton.SharedInstance.child[Singleton.SharedInstance.currentChildId]
     
+    @IBOutlet weak var imageHeader: UIImageView!
+    @IBOutlet weak var imageName: UIImageView!
+    @IBOutlet weak var imageGender: UIImageView!
+    @IBOutlet weak var imageBirthdate: UIImageView!
+    
     @IBOutlet weak var textfieldName: UITextField!
     @IBOutlet weak var selectedGender: UISegmentedControl!
     @IBOutlet weak var datepickerBirthday: UIDatePicker!
@@ -44,7 +49,6 @@ class ViewControllerMasterdata: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround()
         view.backgroundColor = ColorScheme().backgroundColor
         self.selectedGender.backgroundColor = UIColor.white
         self.datepickerBirthday.backgroundColor = UIColor.white
@@ -64,8 +68,16 @@ class ViewControllerMasterdata: UIViewController {
         else {
             self.selectedGender.selectedSegmentIndex = 1
         }
-        self.textfieldName.becomeFirstResponder()
-        self.selectedGender.tintColor = ColorScheme().buttonColor
+        self.selectedGender.tintColor = ColorScheme().blue
+        
+        imageHeader.image = UIImage(named: "add_user_icon")?.withRenderingMode(.alwaysTemplate)
+        imageHeader.tintColor = ColorScheme().blue
+        imageName.image = UIImage(named: "user_icon")?.withRenderingMode(.alwaysTemplate)
+        imageName.tintColor = ColorScheme().blue
+        imageGender.image = UIImage(named: "icon_gender")?.withRenderingMode(.alwaysTemplate)
+        imageGender.tintColor = ColorScheme().blue
+        imageBirthdate.image = UIImage(named: "icon_birthday")?.withRenderingMode(.alwaysTemplate)
+        imageBirthdate.tintColor = ColorScheme().blue
     }
 
 }

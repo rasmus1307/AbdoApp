@@ -46,7 +46,7 @@ class ViewControllerRegEnd: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.isNavigationBarHidden = false
         self.view.backgroundColor = ColorScheme().backgroundColor
         let confettiView = SAConfettiView(frame: self.viewConfetti.bounds)
         confettiView.type = .Confetti

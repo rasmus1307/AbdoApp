@@ -12,21 +12,20 @@ class ViewControllerSupplement: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
         
-        headerView.frame = CGRect(x: 0, y: 0, width: view.bounds.size.width, height: 45)
-        //        headerView.backgroundColor = ColorScheme().buttonColor
-        changeViewStyling(view : headerView)
+        headerView.frame = CGRect(x: 0, y: 0, width: view.bounds.size.width, height: 65)
+        headerView.backgroundColor = ColorScheme().blue
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 18)
         label.text = "Vælg kosttilskud"
         label.textColor = ColorScheme().buttonTextColor
-        label.frame = CGRect(x: 5, y: 5, width: view.bounds.size.width, height: 35)
+        label.frame = CGRect(x: 8, y: 15, width: view.bounds.size.width, height: 35)
         headerView.addSubview(label)
         
         return headerView
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 45
+        return 65
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {

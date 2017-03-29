@@ -9,6 +9,7 @@ class ViewControllerCreateChild: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var backgroundView: UIView!
     
     let sectionTitles = ["Stamdata", "Medicin", "Allergier", "Kosttilskud"]
+    var sectionIcons = [UIImage(named: "user_icon")?.withRenderingMode(.alwaysTemplate), UIImage(named: "icon_medicine")?.withRenderingMode(.alwaysTemplate), UIImage(named: "icon_allergy")?.withRenderingMode(.alwaysTemplate), UIImage(named: "icon_supplement")?.withRenderingMode(.alwaysTemplate)]
     
     var stamdata = [String]()
     var medicin = [ChildMedicin]()
@@ -22,35 +23,51 @@ class ViewControllerCreateChild: UIViewController, UITableViewDataSource, UITabl
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
-        headerView.frame = CGRect(x: 0, y: 0, width: view.bounds.size.width, height: 45)
+        headerView.frame = CGRect(x: 0, y: 0, width: view.bounds.size.width, height: 65)
         
         let gesture = UITapGestureRecognizer(target: self, action: #selector(self.pressed(sender:)))
         gesture.accessibilityLabel = sectionTitles[section]
         headerView.addGestureRecognizer(gesture)
 
-//        headerView.backgroundColor = ColorScheme().buttonColor
-        changeViewStyling(view : headerView)
+        headerView.backgroundColor = .white
+        //changeViewStyling(view : headerView)
+        
+        let leftImagePoint = CGPoint(x: 16, y: 15)
+        let leftImageSize = CGSize(width: 35, height: 35)
+        let leftImage = UIImageView(frame: CGRect(origin: leftImagePoint, size: leftImageSize))
+        leftImage.image = sectionIcons[section]
+        leftImage.tintColor = ColorScheme().blue
+        headerView.addSubview(leftImage)
         
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 18)
         label.text = sectionTitles[section]
-        label.textColor = ColorScheme().buttonTextColor
-        label.frame = CGRect(x: 5, y: 5, width: 100, height: 35)
+        label.textColor = ColorScheme().blue
+        label.frame = CGRect(x: 59, y: 15, width: 100, height: 35)
         headerView.addSubview(label)
         
-        let button = UIButton()
-        button.frame = CGRect(x: headerView.bounds.size.width - 50, y: 5, width: 25, height: 25)
-        button.layer.cornerRadius = 0.5 * button.bounds.size.width
-        button.setImage(#imageLiteral(resourceName: "PencilWhite64"), for: .normal)
-        button.accessibilityLabel = sectionTitles[section]
-        button.addTarget(self, action: #selector(self.pressed(sender:)), for: .touchUpInside)
-        headerView.addSubview(button)
+        let rightImagePoint = CGPoint(x: headerView.bounds.size.width - 50, y: 15)
+        let rightImageSize = CGSize(width: 35, height: 35)
+        let rightImage = UIImageView(frame: CGRect(origin: rightImagePoint, size: rightImageSize))
+        rightImage.image = UIImage(named: "icon_right_arrow")?.withRenderingMode(.alwaysTemplate)
+        rightImage.tintColor = ColorScheme().blue
+        headerView.addSubview(rightImage)
+        
+        
+//        let button = UIButton()
+//        button.frame = CGRect(x: headerView.bounds.size.width - 50, y: 15, width: 35, height: 35)
+//        //button.layer.cornerRadius = 0.5 * button.bounds.size.width
+//        button.imageView?.image = UIImage(named: "icon_right_arrow")?.withRenderingMode(.alwaysTemplate)
+////        button.imageView?.tintColor = ColorScheme().blue
+//        button.accessibilityLabel = sectionTitles[section]
+//        button.addTarget(self, action: #selector(self.pressed(sender:)), for: .touchUpInside)
+//        headerView.addSubview(button)
         
         return headerView
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 45
+        return 65
     }
     
     // Setting up the footer
@@ -61,7 +78,7 @@ class ViewControllerCreateChild: UIViewController, UITableViewDataSource, UITabl
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 12
+        return 2
     }
     
     // Function called when a Plus button is pressed
@@ -140,10 +157,10 @@ class ViewControllerCreateChild: UIViewController, UITableViewDataSource, UITabl
                 if self.medicin[indexPath.row].dosage == "" {} else {medicinDosage = " (\(medicin[indexPath.row].dosage))"}
                 let medicinItem = self.medicin[indexPath.row].type
                 cell.textLabel?.text = "\(medicinItem)\(medicinDosage)"
-                let image = UIImage(named: "PencilGreen")
+                let image = UIImage(named: "PencilBlack")?.withRenderingMode(.alwaysTemplate)
                 let imageView = UIImageView(image: image!)
-                imageView.frame = CGRect(x: cell.bounds.size.width, y: 5, width: 35, height: 35)
-                imageView.tintColor = ColorScheme().buttonColor
+                imageView.tintColor = ColorScheme().blue
+                imageView.frame = CGRect(x: cell.bounds.size.width, y: 10, width: 25, height: 25)
                 cell.addSubview(imageView)
             case 2:
                 let allergyItem = self.allergies[indexPath.row]

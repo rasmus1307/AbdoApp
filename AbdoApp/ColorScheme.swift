@@ -2,9 +2,24 @@ import Foundation
 import UIKit
 
 public struct ColorScheme {
+    
+    public let blue = UIColor(red: 33/255.0, green: 162/255.0, blue: 220/255.0, alpha: 1)
+    public let purple = UIColor(red: 172/255.0, green: 112/255.0, blue: 140/255.0, alpha: 1)
+    public let green = UIColor(red: 112/255.0, green: 171/255.0, blue: 143/255.0, alpha: 1)
+    public let beige = UIColor(red: 228/255.0, green: 219/255.0, blue: 191/255.0, alpha: 1)
+    public let orange = UIColor(red: 220/255.0, green: 91/255.0, blue: 33/255.0, alpha: 1)
+    public let black = UIColor(red: 56/255.0, green: 49/255.0, blue: 39/255.0, alpha: 1)
+    public let white = UIColor(red: 244/255.0, green: 244/255.0, blue: 242/255.0, alpha: 1)
+
     public let backgroundColor = UIColor(red: 228/255.0, green: 219/255.0, blue: 191/255.0, alpha: 1)
     public let backgroundColor2 = UIColor(red: 228/255.0, green: 200/255.0, blue: 181/255.0, alpha: 1)
     public let backgroundColor3 = UIColor(red: 228/255.0, green: 180/255.0, blue: 171/255.0, alpha: 1)
+    
+    // Background color Masterdata Blue color
+    public let masterData = UIColor(red: 33/255, green: 162/255, blue: 220/255, alpha: 1)
+    public let shareCode = UIColor(red: 171/255, green: 112/255, blue: 140/255, alpha: 1)
+    public let restoreFromMail = UIColor(red: 112/255, green: 171/255, blue: 143/255, alpha: 1)
+    
     public let buttonColor = UIColor(red: 112/255, green: 171/255, blue: 143/255, alpha: 1)
     public let buttonColor2 = UIColor(red: 90/255, green: 150/255, blue: 164/255, alpha: 1)
     public let barColor = UIColor(red: 220/255.0, green: 91/255.0, blue: 33/255.0, alpha: 1)
