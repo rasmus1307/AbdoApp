@@ -6,19 +6,6 @@ class ViewControllerEmailLink: UIViewController {
     @IBOutlet weak var imageAtCenter: UIImageView!
     @IBOutlet weak var textfieldEmail: UITextField!
     
-    
-    @IBAction func textFieldEmailEditingStarted(_ sender: UITextField) {
-        if textfieldEmail.text == "Indtast email her" {
-           textfieldEmail.text = ""
-        }
-    }
-    
-    @IBAction func textFieldEmailEditingEnded(_ sender: UITextField) {
-        if textfieldEmail.text == "" {
-            textfieldEmail.text = "Indtast email her"
-        }
-    }
-    
     @IBAction func buttonSave(_ sender: UIBarButtonItem) {
         if isValidEmailAddress(emailAddressString: textfieldEmail.text!) {
             print("valid email \(textfieldEmail.text!)")

@@ -30,7 +30,7 @@ class ViewControllerMedicinAdd: UIViewController {
         self.medicinDosage.text = self.segueMedicin.dosage
         
         imageHeader.image = UIImage(named: "icon_medicine")?.withRenderingMode(.alwaysTemplate)
-        imageHeader.tintColor = ColorScheme().blue
+        imageHeader.tintColor = ColorScheme().white
         imageMedicine.image = UIImage(named: "icon_meds")?.withRenderingMode(.alwaysTemplate)
         imageMedicine.tintColor = ColorScheme().blue
         imageDosage.image = UIImage(named: "icon_dosage")?.withRenderingMode(.alwaysTemplate)

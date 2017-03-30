@@ -70,8 +70,8 @@ class ViewControllerMasterdata: UIViewController {
         }
         self.selectedGender.tintColor = ColorScheme().blue
         
-        imageHeader.image = UIImage(named: "add_user_icon")?.withRenderingMode(.alwaysTemplate)
-        imageHeader.tintColor = ColorScheme().blue
+        imageHeader.image = UIImage(named: "icon_info")?.withRenderingMode(.alwaysTemplate)
+        imageHeader.tintColor = .white
         imageName.image = UIImage(named: "user_icon")?.withRenderingMode(.alwaysTemplate)
         imageName.tintColor = ColorScheme().blue
         imageGender.image = UIImage(named: "icon_gender")?.withRenderingMode(.alwaysTemplate)

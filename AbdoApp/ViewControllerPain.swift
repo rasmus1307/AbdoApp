@@ -1,6 +1,23 @@
 import UIKit
+import AVFoundation
 
 class ViewControllerPain: UIViewController {
+    
+    
+    @IBOutlet weak var iconLeft: UIImageView!
+    @IBOutlet weak var iconMegaphone: UIButton!
+    @IBAction func buttonMegaphone(_ sender: UIButton) {
+        megaphone()
+    }
+
+    func megaphone() {
+        let utterance = AVSpeechUtterance(string: "Hvor ondt gør det?")
+        utterance.voice = AVSpeechSynthesisVoice(language: "da-DK")
+        utterance.rate = 0.4
+        
+        let synthesizer = AVSpeechSynthesizer()
+        synthesizer.speak(utterance)
+    }
     
     @IBOutlet weak var theView: UIView!
     var collectionView: UICollectionView!
@@ -14,6 +31,10 @@ class ViewControllerPain: UIViewController {
         self.navigationController?.isNavigationBarHidden = false
         setupCollectionView()
         automaticallyAdjustsScrollViewInsets = false
+        iconLeft.image = UIImage(named: "icon_scale")?.withRenderingMode(.alwaysTemplate)
+        iconLeft.tintColor = .white
+        iconMegaphone.imageView?.image = UIImage(named: "icon_megaphone")?.withRenderingMode(.alwaysTemplate)
+        iconMegaphone.imageView?.tintColor = .white
     }
     
     func setupCollectionView() {
@@ -24,13 +45,11 @@ class ViewControllerPain: UIViewController {
         collectionView.register(CollectionViewCellRating.self, forCellWithReuseIdentifier: "collectionCell")
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.backgroundColor = .gray
+        collectionView.backgroundColor = ColorScheme().beige
         theView.addSubview(collectionView)
     }
     
 }
-
-
 
 extension ViewControllerPain: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     

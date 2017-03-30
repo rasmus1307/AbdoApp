@@ -7,25 +7,6 @@ class ViewControllerSharecode: UIViewController {
     @IBOutlet weak var imageAtCenter: UIImageView!
     @IBOutlet weak var textfieldSharecode: UITextField!
     
-    @IBAction func textFieldShareCode(_ sender: UITextField) {
-        
-        if sender.text == "" {
-            textfieldSharecode.text = "Indtast delekode her"
-        }
-        else if !(sender.text?.isNumber)! && !(textfieldSharecode.text == "Indtast delekode her") {
-            textfieldSharecode.text = "Indtast delekode her"
-        }
-        else { }
-        
-    }
-    
-    @IBAction func textFieldShareCodeEditingStarted(_ sender: UITextField) {
-        if sender.text == "Indtast delekode her" {
-            textfieldSharecode.text = ""
-        }
-    }
-    
-    
     @IBAction func buttonSave(_ sender: UIBarButtonItem) {
         if (textfieldSharecode.text?.characters.count == 6 && (textfieldSharecode.text?.isNumber)!) {
             print("Gyldig delekode indtastet")

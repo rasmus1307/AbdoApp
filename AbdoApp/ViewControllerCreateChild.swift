@@ -5,11 +5,15 @@ class ViewControllerCreateChild: UIViewController, UITableViewDataSource, UITabl
     let newChild = Singleton.SharedInstance.child.append(_: Child())
     var theChild = Singleton.SharedInstance.child[Singleton.SharedInstance.currentChildId]
     
+    @IBOutlet weak var imageHeader: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backgroundView: UIView!
+    @IBAction func buttonSave(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "showRegistrationFlow", sender: sender)
+    }
     
     let sectionTitles = ["Stamdata", "Medicin", "Allergier", "Kosttilskud"]
-    var sectionIcons = [UIImage(named: "user_icon")?.withRenderingMode(.alwaysTemplate), UIImage(named: "icon_medicine")?.withRenderingMode(.alwaysTemplate), UIImage(named: "icon_allergy")?.withRenderingMode(.alwaysTemplate), UIImage(named: "icon_supplement")?.withRenderingMode(.alwaysTemplate)]
+    var sectionIcons = [UIImage(named: "icon_info")?.withRenderingMode(.alwaysTemplate), UIImage(named: "icon_medicine")?.withRenderingMode(.alwaysTemplate), UIImage(named: "icon_allergy")?.withRenderingMode(.alwaysTemplate), UIImage(named: "icon_supplement")?.withRenderingMode(.alwaysTemplate)]
     
     var stamdata = [String]()
     var medicin = [ChildMedicin]()
@@ -230,6 +234,8 @@ class ViewControllerCreateChild: UIViewController, UITableViewDataSource, UITabl
         self.tableView.delegate = self
         self.tableView.backgroundColor = ColorScheme().backgroundColor
         self.backgroundView.backgroundColor = ColorScheme().backgroundColor
+        imageHeader.image = UIImage(named: "add_user_icon")?.withRenderingMode(.alwaysTemplate)
+        imageHeader.tintColor = .white
     }
 
 }

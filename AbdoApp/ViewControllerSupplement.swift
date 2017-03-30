@@ -10,22 +10,33 @@ class ViewControllerSupplement: UIViewController, UITableViewDataSource, UITable
     var datasource : [Supplement] = Singleton.SharedInstance.supplements
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView()
         
-        headerView.frame = CGRect(x: 0, y: 0, width: view.bounds.size.width, height: 65)
+        let headerView = UIView()
+        headerView.frame = CGRect(x: 0, y: 0, width: view.bounds.size.width, height: 100)
         headerView.backgroundColor = ColorScheme().blue
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 18)
-        label.text = "Vælg kosttilskud"
-        label.textColor = ColorScheme().buttonTextColor
-        label.frame = CGRect(x: 8, y: 15, width: view.bounds.size.width, height: 35)
-        headerView.addSubview(label)
+        
+        let leftImagePoint = CGPoint(x: 16, y: 18)
+        let leftImageSize = CGSize(width: 64, height: 64)
+        let leftImage = UIImageView(frame: CGRect(origin: leftImagePoint, size: leftImageSize))
+        leftImage.image = UIImage(named: "icon_supplement")?.withRenderingMode(.alwaysTemplate)
+        leftImage.tintColor = ColorScheme().white
+        headerView.addSubview(leftImage)
+        
+        let textView = UITextView()
+        let textViewPoint = CGPoint(x: leftImagePoint.x + leftImageSize.width + 8, y: 8)
+        let textViewSize = CGSize(width: view.bounds.size.width - 80, height: 84)
+        textView.frame = CGRect(origin: textViewPoint, size: textViewSize)
+        textView.text = "Her kan du vælge dit barns kosttilskud"
+        textView.font = UIFont.systemFont(ofSize: 22)
+        textView.backgroundColor = .clear
+        textView.textColor = .white
+        headerView.addSubview(textView)
         
         return headerView
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 65
+        return 100
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
