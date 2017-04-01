@@ -9,6 +9,7 @@ class ViewControllerSupplement: UIViewController, UITableViewDataSource, UITable
     
     var datasource : [Supplement] = Singleton.SharedInstance.supplements
     
+    // Started setting up the tableview title and footer
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let headerView = UIView()
@@ -48,12 +49,7 @@ class ViewControllerSupplement: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 8
     }
-    
-//    // Title for the table view
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
-//    {
-//        return "Vælg kosttilskud"
-//    }
+    // Finished setting up the tableview title and footer 
     
     // How many sections in the table view
     func numberOfSections(in tableView: UITableView) -> Int
@@ -72,33 +68,42 @@ class ViewControllerSupplement: UIViewController, UITableViewDataSource, UITable
     {
         let cell = UITableViewCell()
         let (item) = self.datasource[indexPath.row]
-        if self.theChild.supplements.keys.contains(item.type)
-        {
+        if self.theChild.supplements.contains(where: { $0.id == item.id }) {
             cell.accessoryType = .checkmark
         }
+//        if self.theChild.supplements.keys.contains(item.type)
+//        {
+//            cell.accessoryType = .checkmark
+//        }
         cell.textLabel?.text = item.type
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        // adding the value to childs list of supplements
+        // getting the datasource object from the row selected
         let selected = self.datasource[indexPath.row]
 
-        // adding checkmark to row
+        // getting the that was clicked
         if let cell = tableView.cellForRow(at: indexPath)
         {
+            // removing checkmark if row selected with checkmark
+            // and removing from the child object
             if cell.accessoryType == .checkmark
             {
                 cell.accessoryType = .none
-                self.theChild.supplements.removeValue(forKey: selected.type)
+                self.theChild.supplements = self.theChild.supplements.filter({$0.type != selected.type})
+//                self.theChild.supplements.removeValue(forKey: selected.type)
                 cell.isSelected = false
                 cell.isHighlighted = false
             }
+            // adding checkmark to row when selected
+            // and appending it to the child object
             else
             {
                 cell.accessoryType = .checkmark
-                self.theChild.supplements[selected.type] = selected
+                self.theChild.supplements.append(selected)
+//                self.theChild.supplements[selected.type] = selected
                 cell.isSelected = false
                 cell.isHighlighted = false
             }

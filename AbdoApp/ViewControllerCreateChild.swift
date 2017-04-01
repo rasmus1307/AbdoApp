@@ -225,8 +225,10 @@ class ViewControllerCreateChild: UIViewController, UITableViewDataSource, UITabl
         self.navigationItem.title = "Registrer barn"
         self.stamdata = self.theChild.convertChildInfoToArray()
         self.medicin = self.theChild.medicins
-        self.allergies = Array(self.theChild.allergies.keys)
-        self.supplements = Array(self.theChild.supplements.keys)
+        self.allergies = self.theChild.allergies.map { $0.type }
+        //self.allergies = Array(self.theChild.allergies.keys)
+        self.supplements = self.theChild.supplements.map { $0.type }
+//        self.supplements = Array(self.theChild.supplements.keys)
         self.theChild = Singleton.SharedInstance.child[Singleton.SharedInstance.currentChildId]
         self.tableView.reloadData()
     }

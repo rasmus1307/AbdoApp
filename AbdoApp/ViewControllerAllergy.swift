@@ -34,7 +34,6 @@ class ViewControllerAllergy: UIViewController, UITableViewDataSource, UITableVie
         headerView.addSubview(textView)
         
         return headerView
-        
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -66,7 +65,7 @@ class ViewControllerAllergy: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         let (item) = self.datasource[indexPath.row]
-        if self.theChild.allergies.keys.contains(item.type) {
+        if self.theChild.allergies.contains(where: { $0.id == item.id }) {
             cell.accessoryType = .checkmark
         }
         cell.textLabel?.text = item.type
@@ -75,23 +74,27 @@ class ViewControllerAllergy: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        // adding the value to childs list of supplements
+        // getting the datasource object from the row selected
         let selected = self.datasource[indexPath.row]
         
-        // adding checkmark to row
+        // getting the that was clicked
         if let cell = tableView.cellForRow(at: indexPath)
         {
+            // removing checkmark if row selected with checkmark
+            // and removing from the child object
             if cell.accessoryType == .checkmark
             {
                 cell.accessoryType = .none
-                self.theChild.allergies.removeValue(forKey: selected.type)
+                self.theChild.allergies = self.theChild.allergies.filter({$0.type != selected.type})
                 cell.isSelected = false
                 cell.isHighlighted = false
             }
+            // adding checkmark to row when selected
+            // and appending it to the child object
             else
             {
                 cell.accessoryType = .checkmark
-                self.theChild.allergies[selected.type] = selected
+                self.theChild.allergies.append(selected)
                 cell.isSelected = false
                 cell.isHighlighted = false
             }
@@ -103,8 +106,8 @@ class ViewControllerAllergy: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.backgroundView.backgroundColor = ColorScheme().backgroundColor
-        self.tableView.backgroundColor = ColorScheme().backgroundColor
+        self.backgroundView.backgroundColor = ColorScheme().orange
+        self.tableView.backgroundColor = ColorScheme().orange
     }
     
 }
