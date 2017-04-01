@@ -164,7 +164,7 @@ class ViewControllerCreateChild: UIViewController, UITableViewDataSource, UITabl
                 let image = UIImage(named: "PencilBlack")?.withRenderingMode(.alwaysTemplate)
                 let imageView = UIImageView(image: image!)
                 imageView.tintColor = ColorScheme().blue
-                imageView.frame = CGRect(x: cell.bounds.size.width, y: 10, width: 25, height: 25)
+                imageView.frame = CGRect(x: cell.bounds.size.width, y: 5, width: 20, height: 20)
                 cell.addSubview(imageView)
             case 2:
                 let allergyItem = self.allergies[indexPath.row]
@@ -178,6 +178,10 @@ class ViewControllerCreateChild: UIViewController, UITableViewDataSource, UITabl
                 cell.textLabel?.text = ""
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 30
     }
     
     // linking a row/section to the correct edit view
@@ -233,6 +237,7 @@ class ViewControllerCreateChild: UIViewController, UITableViewDataSource, UITabl
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.backgroundColor = ColorScheme().backgroundColor
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         self.backgroundView.backgroundColor = ColorScheme().backgroundColor
         imageHeader.image = UIImage(named: "add_user_icon")?.withRenderingMode(.alwaysTemplate)
         imageHeader.tintColor = .white

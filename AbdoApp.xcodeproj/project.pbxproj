@@ -16,7 +16,6 @@
 		CB23C7131E75FC420046E5DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB23C7121E75FC420046E5DF /* AppDelegate.swift */; };
 		CB23C7181E75FC420046E5DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB23C7161E75FC420046E5DF /* Main.storyboard */; };
 		CB23C71B1E75FC420046E5DF /* AbdoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB23C7191E75FC420046E5DF /* AbdoApp.xcdatamodeld */; };
-		CB23C71D1E75FC420046E5DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB23C71C1E75FC420046E5DF /* Assets.xcassets */; };
 		CB23C7201E75FC420046E5DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB23C71E1E75FC420046E5DF /* LaunchScreen.storyboard */; };
 		CB5210861E8A879F00436582 /* CollectionViewCellStartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5210851E8A879F00436582 /* CollectionViewCellStartPage.swift */; };
 		CB5A307C1E7CC96E000D4EA6 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5A307B1E7CC96E000D4EA6 /* TableViewCell.swift */; };
@@ -43,6 +42,8 @@
 		CB6D5D531E7600AA00D36853 /* PainLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D5D4E1E7600AA00D36853 /* PainLevel.swift */; };
 		CB7FD1FD1E7895DD00AFFE3D /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FD1FC1E7895DD00AFFE3D /* ColorScheme.swift */; };
 		CB7FD1FF1E79D3ED00AFFE3D /* SetupVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FD1FE1E79D3EC00AFFE3D /* SetupVariables.swift */; };
+		CB89AC941E903AF50039C562 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB89AC931E903AF50039C562 /* SplashScreenViewController.swift */; };
+		CB89AC971E90484A0039C562 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB89AC961E90484A0039C562 /* Images.xcassets */; };
 		CBA4B3591E81D83700ECBFF5 /* ViewControllerRegStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA4B3581E81D83700ECBFF5 /* ViewControllerRegStart.swift */; };
 		CBB4AB8C1E81F2D700C29C08 /* ViewControllerPain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4AB8B1E81F2D700C29C08 /* ViewControllerPain.swift */; };
 		CBB4AB8E1E81F30800C29C08 /* ViewControllerOtherRegs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4AB8D1E81F30800C29C08 /* ViewControllerOtherRegs.swift */; };
@@ -87,7 +88,6 @@
 		CB23C7121E75FC420046E5DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB23C7171E75FC420046E5DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB23C71A1E75FC420046E5DF /* AbdoApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AbdoApp.xcdatamodel; sourceTree = "<group>"; };
-		CB23C71C1E75FC420046E5DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB23C71F1E75FC420046E5DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB23C7211E75FC420046E5DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB5210851E8A879F00436582 /* CollectionViewCellStartPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCellStartPage.swift; sourceTree = "<group>"; };
@@ -115,6 +115,8 @@
 		CB6D5D4E1E7600AA00D36853 /* PainLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PainLevel.swift; sourceTree = "<group>"; };
 		CB7FD1FC1E7895DD00AFFE3D /* ColorScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
 		CB7FD1FE1E79D3EC00AFFE3D /* SetupVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupVariables.swift; sourceTree = "<group>"; };
+		CB89AC931E903AF50039C562 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		CB89AC961E90484A0039C562 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CBA4B3581E81D83700ECBFF5 /* ViewControllerRegStart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerRegStart.swift; sourceTree = "<group>"; };
 		CBB4AB8B1E81F2D700C29C08 /* ViewControllerPain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPain.swift; sourceTree = "<group>"; };
 		CBB4AB8D1E81F30800C29C08 /* ViewControllerOtherRegs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerOtherRegs.swift; sourceTree = "<group>"; };
@@ -193,10 +195,10 @@
 				CB6D5D301E76000B00D36853 /* Objects */,
 				CB6D5D2D1E75FFED00D36853 /* SwiftExtensions */,
 				CBB62EA91E7841F3005C9FEC /* ViewControllers */,
-				CB23C71C1E75FC420046E5DF /* Assets.xcassets */,
 				CB23C71E1E75FC420046E5DF /* LaunchScreen.storyboard */,
 				CB23C7211E75FC420046E5DF /* Info.plist */,
 				CB23C7191E75FC420046E5DF /* AbdoApp.xcdatamodeld */,
+				CB89AC961E90484A0039C562 /* Images.xcassets */,
 			);
 			path = AbdoApp;
 			sourceTree = "<group>";
@@ -330,6 +332,7 @@
 		CBB62EA91E7841F3005C9FEC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CB89AC931E903AF50039C562 /* SplashScreenViewController.swift */,
 				CBA4B3571E81D7FA00ECBFF5 /* CreateProcess */,
 				CBA4B3561E81D7E700ECBFF5 /* RegistrationProcess */,
 			);
@@ -421,7 +424,7 @@
 				TargetAttributes = {
 					CB23C70E1E75FC420046E5DF = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 6W3S8GJV92;
+						DevelopmentTeam = DE6WJ525S8;
 						ProvisioningStyle = Automatic;
 					};
 					CBF2B95C1E760232006B9D44 = {
@@ -455,8 +458,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB89AC971E90484A0039C562 /* Images.xcassets in Resources */,
 				CB23C7201E75FC420046E5DF /* LaunchScreen.storyboard in Resources */,
-				CB23C71D1E75FC420046E5DF /* Assets.xcassets in Resources */,
 				CB23C7181E75FC420046E5DF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -596,6 +599,7 @@
 				CB6D5D4F1E7600AA00D36853 /* Activity.swift in Sources */,
 				CB5A71B21E8A62770005B867 /* CollectionViewCellRating.swift in Sources */,
 				CB5210861E8A879F00436582 /* CollectionViewCellStartPage.swift in Sources */,
+				CB89AC941E903AF50039C562 /* SplashScreenViewController.swift in Sources */,
 				CBB62EA21E777744005C9FEC /* PainPlacement.swift in Sources */,
 				CB6D5D331E76004000D36853 /* Anonymous.swift in Sources */,
 				CBB62EB11E7843C2005C9FEC /* ViewControllerSharecode.swift in Sources */,
@@ -757,10 +761,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6W3S8GJV92;
+				DEVELOPMENT_TEAM = DE6WJ525S8;
 				INFOPLIST_FILE = AbdoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Heaven.AbdoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = net.thorstholm.AbdoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -772,10 +776,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6W3S8GJV92;
+				DEVELOPMENT_TEAM = DE6WJ525S8;
 				INFOPLIST_FILE = AbdoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Heaven.AbdoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = net.thorstholm.AbdoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
