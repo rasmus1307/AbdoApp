@@ -4,8 +4,13 @@ class ViewControllerSupplement: UIViewController, UITableViewDataSource, UITable
     
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var tableView: UITableView!
+    @IBAction func buttonSave(_ sender: UIBarButtonItem) {
+        theChild.supplements = tempSupplements
+        _ = self.navigationController?.popViewController(animated: true)
+    }
     
     let theChild = Singleton.SharedInstance.child[Singleton.SharedInstance.currentChildId]
+    var tempSupplements = [Supplement]()
     
     var datasource : [Supplement] = Singleton.SharedInstance.supplements
     
@@ -68,13 +73,9 @@ class ViewControllerSupplement: UIViewController, UITableViewDataSource, UITable
     {
         let cell = UITableViewCell()
         let (item) = self.datasource[indexPath.row]
-        if self.theChild.supplements.contains(where: { $0.id == item.id }) {
+        if self.tempSupplements.contains(where: { $0.id == item.id }) {
             cell.accessoryType = .checkmark
         }
-//        if self.theChild.supplements.keys.contains(item.type)
-//        {
-//            cell.accessoryType = .checkmark
-//        }
         cell.textLabel?.text = item.type
         return cell
     }
@@ -92,8 +93,7 @@ class ViewControllerSupplement: UIViewController, UITableViewDataSource, UITable
             if cell.accessoryType == .checkmark
             {
                 cell.accessoryType = .none
-                self.theChild.supplements = self.theChild.supplements.filter({$0.type != selected.type})
-//                self.theChild.supplements.removeValue(forKey: selected.type)
+                self.tempSupplements = self.tempSupplements.filter({$0.type != selected.type})
                 cell.isSelected = false
                 cell.isHighlighted = false
             }
@@ -102,8 +102,7 @@ class ViewControllerSupplement: UIViewController, UITableViewDataSource, UITable
             else
             {
                 cell.accessoryType = .checkmark
-                self.theChild.supplements.append(selected)
-//                self.theChild.supplements[selected.type] = selected
+                self.tempSupplements.append(selected)
                 cell.isSelected = false
                 cell.isHighlighted = false
             }
@@ -119,6 +118,7 @@ class ViewControllerSupplement: UIViewController, UITableViewDataSource, UITable
         self.tableView.backgroundColor = ColorScheme().backgroundColor
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tempSupplements = ( self.theChild.supplements.map{$0} )
     }
 
 }

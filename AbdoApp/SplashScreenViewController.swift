@@ -5,6 +5,8 @@ class SplashScreenViewController: UIViewController {
     @IBOutlet weak var textFieldAbdo: UILabel!
     @IBOutlet weak var imageViewAbdo: UIImageView!
     
+    var applicationId = UIDevice.current.identifierForVendor?.uuidString
+    
     let images = [UIImage(named: "animation0")
         ,UIImage(named: "animation0")
         ,UIImage(named: "animation1")
@@ -20,6 +22,7 @@ class SplashScreenViewController: UIViewController {
         ,UIImage(named: "animation11")]
 
     var timer = Timer()
+    var totalTime = 0.0
 
     var i = 0
     var color1 = ColorScheme().white
@@ -27,6 +30,7 @@ class SplashScreenViewController: UIViewController {
     var bool = true
     
     func runTimedCode() {
+        self.totalTime += 0.5
         let myString:NSString = "abdo"
         var myMutableString = NSMutableAttributedString()
         myMutableString = NSMutableAttributedString(string: myString as String, attributes: [NSFontAttributeName:UIFont(name: textFieldAbdo.font.fontName, size: 32.0)!])
@@ -50,6 +54,11 @@ class SplashScreenViewController: UIViewController {
         }
         textFieldAbdo.attributedText = myMutableString
         
+        
+        // IS TO BE DELETEDE WHEN DEVICE ID IS SEND TO BACKEND
+        if self.totalTime == 6.5 {
+            _ = performSegue(withIdentifier: "showStartPage", sender: self)
+        }
     }
     
     func startAnimation() {
@@ -61,6 +70,8 @@ class SplashScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = ColorScheme().orange
+        Singleton.SharedInstance.anonymous.deviceId = self.applicationId!
+        print("\(Singleton.SharedInstance.anonymous.deviceId)")
     }
     
     override func viewWillAppear(_ animated: Bool) {

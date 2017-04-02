@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8rL-vg-sxb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4ZB-cl-SqU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -499,14 +500,23 @@
                             <constraint firstItem="sjB-zX-nt1" firstAttribute="top" secondItem="T5d-C7-ERH" secondAttribute="bottom" id="rzQ-sK-Cf5"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Medicin" id="4ue-NF-6J8">
                         <barButtonItem key="backBarButtonItem" title="Annuller" id="lf4-7o-8sa"/>
-                        <barButtonItem key="rightBarButtonItem" title="Gem" id="XmY-fp-pW3">
-                            <connections>
-                                <action selector="medicinSave:" destination="YN8-2Z-HbM" id="ZyU-km-zwp"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Gem" id="XmY-fp-pW3">
+                                <connections>
+                                    <action selector="medicinSave:" destination="YN8-2Z-HbM" id="ZyU-km-zwp"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="trash" id="WIE-9T-BY0">
+                                <connections>
+                                    <action selector="medicinDelete:" destination="YN8-2Z-HbM" id="cij-vc-LGB"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="imageDosage" destination="fFW-0N-kjb" id="hrL-rq-Oi6"/>
                         <outlet property="imageHeader" destination="mbl-cH-upO" id="pEg-cJ-wiU"/>
@@ -1796,7 +1806,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Kosttilskud" id="gIh-T9-s3j">
                         <barButtonItem key="backBarButtonItem" title="Tilbage" id="6en-OV-SGS"/>
-                        <barButtonItem key="rightBarButtonItem" title="Gem" id="jfc-Ve-hBM"/>
+                        <barButtonItem key="rightBarButtonItem" title="Gem" id="jfc-Ve-hBM">
+                            <connections>
+                                <action selector="buttonSave:" destination="Xsl-sP-bpz" id="Aty-HD-wRZ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="backgroundView" destination="ibt-Bn-xcr" id="UUK-hq-5to"/>
@@ -1844,6 +1858,7 @@
                     <connections>
                         <outlet property="imageViewAbdo" destination="Rab-Ry-sSc" id="txY-K2-iXt"/>
                         <outlet property="textFieldAbdo" destination="adB-fw-sxc" id="pAu-v3-fKX"/>
+                        <segue destination="8rL-vg-sxb" kind="show" identifier="showStartPage" id="lj1-PM-LRv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Sk-un-cQU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1936,6 +1951,6 @@
         <image name="user_icon" width="96" height="96"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DND-EY-L0F"/>
+        <segue reference="B3j-cs-Llb"/>
     </inferredMetricsTieBreakers>
 </document>

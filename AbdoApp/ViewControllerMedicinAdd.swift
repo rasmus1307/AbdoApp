@@ -22,6 +22,14 @@ class ViewControllerMedicinAdd: UIViewController {
         }
     }
     
+    @IBAction func medicinDelete(_ sender: UIBarButtonItem) {
+        if segueMedicin.type != "" {
+            let theChild = Singleton.SharedInstance.child[Singleton.SharedInstance.currentChildId]
+            theChild.medicins = theChild.medicins.filter({$0.type != medicinType.text})
+            _ = self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = ColorScheme().beige
