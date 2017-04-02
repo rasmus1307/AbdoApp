@@ -50,10 +50,8 @@ public class Child
             childInfoArray.append(self.childInfo.name)
             
             // adding gender of the child
-            if self.childInfo.isFemale {
-                childInfoArray.append("Pige")
-            } else {childInfoArray.append("Dreng")
-            }
+            if self.childInfo.gender == 2 { childInfoArray.append("Pige") }
+            if self.childInfo.gender == 1 { childInfoArray.append("Dreng") }
         }
         
         // adding the birthdate of the child

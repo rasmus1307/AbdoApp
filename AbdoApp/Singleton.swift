@@ -11,7 +11,8 @@ public class Singleton
         return Static.instance
     }
     
-    var api : API
+    // Base url
+    let urlBase : String = "http://abdoapi.azurewebsites.net/api"
     
     // System vairables
     var allergies : [Allergy]
@@ -36,8 +37,6 @@ public class Singleton
     
     private init()
     {
-        print("Singleton started")
-        self.api = API()
         self.anonymous = Anonymous()
         self.allergies = SetupVariables().allAllergies
         self.child = []

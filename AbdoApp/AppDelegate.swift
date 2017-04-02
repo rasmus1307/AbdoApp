@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  AbdoApp
-//
-//  Created by GOD on 12/03/2017.
-//  Copyright © 2017 GOD. All rights reserved.
-//
-
 import UIKit
 import CoreData
 import IQKeyboardManagerSwift
@@ -27,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.sharedManager().enable = true
         IQKeyboardManager.sharedManager().shouldResignOnTouchOutside = true
         IQKeyboardManager.sharedManager().enableAutoToolbar = false
-        IQKeyboardManager.sharedManager().toolbarDoneBarButtonItemText = "Færdig"
         
         return true
     }

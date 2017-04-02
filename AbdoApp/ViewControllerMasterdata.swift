@@ -19,9 +19,9 @@ class ViewControllerMasterdata: UIViewController {
             self.theChild.childInfo.name = self.textfieldName.text!
             
             if self.selectedGender.selectedSegmentIndex == 0 {
-                self.theChild.childInfo.isFemale = true
+                self.theChild.childInfo.gender = 2
             } else {
-                self.theChild.childInfo.isFemale = false
+                self.theChild.childInfo.gender = 1
             }
             
             let dateFormatter = DateFormatter()
@@ -61,11 +61,11 @@ class ViewControllerMasterdata: UIViewController {
             self.datepickerBirthday.date = NSDate() as Date
         }
         self.textfieldName.text = theChild.childInfo.name
-        if self.theChild.childInfo.isFemale
+        if self.theChild.childInfo.gender == 2
         {
             self.selectedGender.selectedSegmentIndex = 0
         }
-        else {
+        if self.theChild.childInfo.gender == 1 {
             self.selectedGender.selectedSegmentIndex = 1
         }
         self.selectedGender.tintColor = ColorScheme().blue

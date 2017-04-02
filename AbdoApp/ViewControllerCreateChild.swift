@@ -149,6 +149,7 @@ class ViewControllerCreateChild: UIViewController, UITableViewDataSource, UITabl
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = UITableViewCell()
+        cell.frame = CGRect(x: 0, y: 0, width: view.bounds.size.width, height: 30)
         
         switch indexPath.section
         {
@@ -164,7 +165,7 @@ class ViewControllerCreateChild: UIViewController, UITableViewDataSource, UITabl
                 let image = UIImage(named: "PencilBlack")?.withRenderingMode(.alwaysTemplate)
                 let imageView = UIImageView(image: image!)
                 imageView.tintColor = ColorScheme().blue
-                imageView.frame = CGRect(x: cell.bounds.size.width, y: 5, width: 20, height: 20)
+                imageView.frame = CGRect(x: cell.bounds.size.width - 50, y: 5, width: 20, height: 20)
                 cell.addSubview(imageView)
             case 2:
                 let allergyItem = self.allergies[indexPath.row]

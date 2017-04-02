@@ -34,56 +34,11 @@ class AbdoAppTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
- 
-    func testChild()
-    {
-        let myTestingChild = Child()
-        myTestingChild.childInfo.name = "Abdo"
-        myTestingChild.shareCode.CreateShareCode()
-        API().shareCode.Set(child: myTestingChild)
-        print("testing finnished")
-    }
     
-    func testApi()
-    {
-        Alamofire.request("http://abdoapi.azurewebsites.net/api/values").responseJSON { response in
-            let json = JSON(response.result)
-            print("JSON: \(json)")
-        }
-    }
-    
-    func testAlamofireGet()
-    {
-        let urlString = "http://abdoapi.azurewebsites.net/api/values/"
+    func testApiAnonymous() {
         
-        // When
-        let request = Alamofire.request(urlString)
-        
-        // Then
-        XCTAssertNotNil(request.request)
-        XCTAssertEqual(request.request?.httpMethod, "GET")
-        XCTAssertEqual(request.request?.url?.absoluteString, urlString)
-        XCTAssertNil(request.response)
-    }
-    
-    func testRegistration()
-    {
-        let child1 : Child = Child()
-        child1.childInfo.name = "Rasmus"
-        child1.shareCode.CreateShareCode()
-        child1.allergies.append(ChildAllergy())
-        child1.registrations.append(Registration())
-        print("\(child1.childInfo.name) sharecode \(child1.shareCode.code)")
-    }
-    
-    func testSingleton()
-    {
-        let childArray = DataContainerSingleton.sharedDataContainer.child
-        print("\(childArray?.count)")
-        var newChild = Child()
-        newChild.childInfo.name = "Rasmus"
-        DataContainerSingleton.sharedDataContainer.child?.append(newChild)
-        print("\(childArray?.count)")
+        let anonymous = Anonymous()
+        API.anonymous.Get(anonymous: anonymous)
         
     }
 }

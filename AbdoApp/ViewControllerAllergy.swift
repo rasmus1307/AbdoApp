@@ -111,8 +111,8 @@ class ViewControllerAllergy: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.backgroundView.backgroundColor = ColorScheme().orange
-        self.tableView.backgroundColor = ColorScheme().orange
+        self.backgroundView.backgroundColor = ColorScheme().beige
+        self.tableView.backgroundColor = ColorScheme().beige
         self.tempAllergies = (theChild.allergies.map{$0})
     }
     

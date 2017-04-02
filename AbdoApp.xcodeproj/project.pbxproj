@@ -9,6 +9,20 @@
 /* Begin PBXBuildFile section */
 		903250F0F44A1540767C711D /* Pods_AbdoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B816E77052CBBBCC25F8A2 /* Pods_AbdoAppTests.framework */; };
 		B8746F562FB02E574FD66C72 /* Pods_AbdoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95F2A7FC5D01A63E8DE379D /* Pods_AbdoApp.framework */; };
+		CB1873B51E91976A009EE73F /* RouterAnonymous.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1873B41E91976A009EE73F /* RouterAnonymous.swift */; };
+		CB1873B71E91A930009EE73F /* RouterChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1873B61E91A930009EE73F /* RouterChild.swift */; };
+		CB1873B91E91A944009EE73F /* RouterAllergy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1873B81E91A944009EE73F /* RouterAllergy.swift */; };
+		CB1873BB1E91A961009EE73F /* RouterSupplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1873BA1E91A961009EE73F /* RouterSupplement.swift */; };
+		CB1873BE1E91A997009EE73F /* RouterRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1873BD1E91A997009EE73F /* RouterRegistration.swift */; };
+		CB1873C01E91A9E5009EE73F /* RouterShareCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1873BF1E91A9E5009EE73F /* RouterShareCode.swift */; };
+		CB1873C31E91AA66009EE73F /* RouterActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1873C21E91AA65009EE73F /* RouterActivity.swift */; };
+		CB1873C51E91AA73009EE73F /* RouterFeces.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1873C41E91AA73009EE73F /* RouterFeces.swift */; };
+		CB1873C71E91AA80009EE73F /* RouterFoodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1873C61E91AA80009EE73F /* RouterFoodCategory.swift */; };
+		CB1873C91E91AA8C009EE73F /* RouterFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1873C81E91AA8C009EE73F /* RouterFood.swift */; };
+		CB1873CB1E91AA99009EE73F /* RouterMood.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1873CA1E91AA99009EE73F /* RouterMood.swift */; };
+		CB1873CD1E91AAA7009EE73F /* RouterPainLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1873CC1E91AAA7009EE73F /* RouterPainLevel.swift */; };
+		CB1873CF1E91AAB6009EE73F /* RouterPainPlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1873CE1E91AAB6009EE73F /* RouterPainPlacement.swift */; };
+		CB1873D11E91AAC5009EE73F /* RouterSleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1873D01E91AAC5009EE73F /* RouterSleep.swift */; };
 		CB22719D1E8834A3000B7E93 /* ViewControllerSleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB22719C1E8834A3000B7E93 /* ViewControllerSleep.swift */; };
 		CB22719F1E8834BC000B7E93 /* ViewControllerMood.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB22719E1E8834BC000B7E93 /* ViewControllerMood.swift */; };
 		CB2271A11E8834D2000B7E93 /* ViewControllerExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2271A01E8834D2000B7E93 /* ViewControllerExercise.swift */; };
@@ -22,8 +36,6 @@
 		CB5A309C1E802787000D4EA6 /* ViewControllerCreateChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5A309B1E802787000D4EA6 /* ViewControllerCreateChild.swift */; };
 		CB5A71B21E8A62770005B867 /* CollectionViewCellRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5A71B11E8A62770005B867 /* CollectionViewCellRating.swift */; };
 		CB6BB69D1E7C89890058585A /* DataSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6BB69C1E7C89890058585A /* DataSingleton.swift */; };
-		CB6D5D2B1E75FFDB00D36853 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D5D291E75FFDB00D36853 /* API.swift */; };
-		CB6D5D2C1E75FFDB00D36853 /* ShareCodeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D5D2A1E75FFDB00D36853 /* ShareCodeAPI.swift */; };
 		CB6D5D2F1E76000400D36853 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D5D2E1E76000400D36853 /* NSDateExtension.swift */; };
 		CB6D5D331E76004000D36853 /* Anonymous.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D5D321E76004000D36853 /* Anonymous.swift */; };
 		CB6D5D3C1E76006400D36853 /* ChildAllergy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D5D351E76006400D36853 /* ChildAllergy.swift */; };
@@ -80,6 +92,20 @@
 		9F4051156F7B3251EED22473 /* Pods-AbdoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AbdoAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AbdoAppTests/Pods-AbdoAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		AED9540F71949B9C2FF299E1 /* Pods-AbdoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AbdoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AbdoApp/Pods-AbdoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B8B816E77052CBBBCC25F8A2 /* Pods_AbdoAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AbdoAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB1873B41E91976A009EE73F /* RouterAnonymous.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterAnonymous.swift; sourceTree = "<group>"; };
+		CB1873B61E91A930009EE73F /* RouterChild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterChild.swift; sourceTree = "<group>"; };
+		CB1873B81E91A944009EE73F /* RouterAllergy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterAllergy.swift; sourceTree = "<group>"; };
+		CB1873BA1E91A961009EE73F /* RouterSupplement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterSupplement.swift; sourceTree = "<group>"; };
+		CB1873BD1E91A997009EE73F /* RouterRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterRegistration.swift; sourceTree = "<group>"; };
+		CB1873BF1E91A9E5009EE73F /* RouterShareCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterShareCode.swift; sourceTree = "<group>"; };
+		CB1873C21E91AA65009EE73F /* RouterActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterActivity.swift; sourceTree = "<group>"; };
+		CB1873C41E91AA73009EE73F /* RouterFeces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterFeces.swift; sourceTree = "<group>"; };
+		CB1873C61E91AA80009EE73F /* RouterFoodCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterFoodCategory.swift; sourceTree = "<group>"; };
+		CB1873C81E91AA8C009EE73F /* RouterFood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterFood.swift; sourceTree = "<group>"; };
+		CB1873CA1E91AA99009EE73F /* RouterMood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterMood.swift; sourceTree = "<group>"; };
+		CB1873CC1E91AAA7009EE73F /* RouterPainLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterPainLevel.swift; sourceTree = "<group>"; };
+		CB1873CE1E91AAB6009EE73F /* RouterPainPlacement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterPainPlacement.swift; sourceTree = "<group>"; };
+		CB1873D01E91AAC5009EE73F /* RouterSleep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterSleep.swift; sourceTree = "<group>"; };
 		CB22719C1E8834A3000B7E93 /* ViewControllerSleep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerSleep.swift; sourceTree = "<group>"; };
 		CB22719E1E8834BC000B7E93 /* ViewControllerMood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerMood.swift; sourceTree = "<group>"; };
 		CB2271A01E8834D2000B7E93 /* ViewControllerExercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExercise.swift; sourceTree = "<group>"; };
@@ -91,12 +117,14 @@
 		CB23C71F1E75FC420046E5DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB23C7211E75FC420046E5DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB5210851E8A879F00436582 /* CollectionViewCellStartPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCellStartPage.swift; sourceTree = "<group>"; };
+		CB53D3601E918DF90071BC0D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Release-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		CB53D3621E918E010071BC0D /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IQKeyboardManagerSwift.framework; path = "Pods/../build/Release-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"; sourceTree = "<group>"; };
+		CB53D3641E918E070071BC0D /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Release-iphoneos/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		CB53D3661E918E100071BC0D /* SAConfettiView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SAConfettiView.framework; path = "Pods/../build/Release-iphoneos/SAConfettiView/SAConfettiView.framework"; sourceTree = "<group>"; };
 		CB5A307B1E7CC96E000D4EA6 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		CB5A309B1E802787000D4EA6 /* ViewControllerCreateChild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerCreateChild.swift; sourceTree = "<group>"; };
 		CB5A71B11E8A62770005B867 /* CollectionViewCellRating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCellRating.swift; sourceTree = "<group>"; };
 		CB6BB69C1E7C89890058585A /* DataSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSingleton.swift; sourceTree = "<group>"; };
-		CB6D5D291E75FFDB00D36853 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		CB6D5D2A1E75FFDB00D36853 /* ShareCodeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareCodeAPI.swift; sourceTree = "<group>"; };
 		CB6D5D2E1E76000400D36853 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
 		CB6D5D321E76004000D36853 /* Anonymous.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anonymous.swift; sourceTree = "<group>"; };
 		CB6D5D351E76006400D36853 /* ChildAllergy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildAllergy.swift; sourceTree = "<group>"; };
@@ -117,6 +145,7 @@
 		CB7FD1FE1E79D3EC00AFFE3D /* SetupVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupVariables.swift; sourceTree = "<group>"; };
 		CB89AC931E903AF50039C562 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		CB89AC961E90484A0039C562 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CBA25D8F1E908A0B00267C24 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Playground.playground; path = ../Playground.playground; sourceTree = "<group>"; };
 		CBA4B3581E81D83700ECBFF5 /* ViewControllerRegStart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerRegStart.swift; sourceTree = "<group>"; };
 		CBB4AB8B1E81F2D700C29C08 /* ViewControllerPain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPain.swift; sourceTree = "<group>"; };
 		CBB4AB8D1E81F30800C29C08 /* ViewControllerOtherRegs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerOtherRegs.swift; sourceTree = "<group>"; };
@@ -162,6 +191,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB1873BC1E91A96A009EE73F /* User */ = {
+			isa = PBXGroup;
+			children = (
+				CB1873B41E91976A009EE73F /* RouterAnonymous.swift */,
+				CB1873B61E91A930009EE73F /* RouterChild.swift */,
+				CB1873BD1E91A997009EE73F /* RouterRegistration.swift */,
+				CB1873BF1E91A9E5009EE73F /* RouterShareCode.swift */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		CB1873C11E91A9EB009EE73F /* System */ = {
+			isa = PBXGroup;
+			children = (
+				CB1873B81E91A944009EE73F /* RouterAllergy.swift */,
+				CB1873BA1E91A961009EE73F /* RouterSupplement.swift */,
+				CB1873C21E91AA65009EE73F /* RouterActivity.swift */,
+				CB1873C41E91AA73009EE73F /* RouterFeces.swift */,
+				CB1873C61E91AA80009EE73F /* RouterFoodCategory.swift */,
+				CB1873C81E91AA8C009EE73F /* RouterFood.swift */,
+				CB1873CA1E91AA99009EE73F /* RouterMood.swift */,
+				CB1873CC1E91AAA7009EE73F /* RouterPainLevel.swift */,
+				CB1873CE1E91AAB6009EE73F /* RouterPainPlacement.swift */,
+				CB1873D01E91AAC5009EE73F /* RouterSleep.swift */,
+			);
+			name = System;
+			sourceTree = "<group>";
+		};
 		CB23C7061E75FC420046E5DF = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +242,7 @@
 		CB23C7111E75FC420046E5DF /* AbdoApp */ = {
 			isa = PBXGroup;
 			children = (
+				CBA25D8F1E908A0B00267C24 /* Playground.playground */,
 				CB23C7161E75FC420046E5DF /* Main.storyboard */,
 				CBB62E9F1E776F8E005C9FEC /* Singleton.swift */,
 				CB7FD1FC1E7895DD00AFFE3D /* ColorScheme.swift */,
@@ -215,8 +273,8 @@
 		CB6D5D281E75FFC100D36853 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				CB6D5D291E75FFDB00D36853 /* API.swift */,
-				CB6D5D2A1E75FFDB00D36853 /* ShareCodeAPI.swift */,
+				CB1873C11E91A9EB009EE73F /* System */,
+				CB1873BC1E91A96A009EE73F /* User */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -351,6 +409,10 @@
 		DBB887AA4CE196F0D991AFD5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CB53D3661E918E100071BC0D /* SAConfettiView.framework */,
+				CB53D3641E918E070071BC0D /* SwiftyJSON.framework */,
+				CB53D3621E918E010071BC0D /* IQKeyboardManagerSwift.framework */,
+				CB53D3601E918DF90071BC0D /* Alamofire.framework */,
 				D95F2A7FC5D01A63E8DE379D /* Pods_AbdoApp.framework */,
 				B8B816E77052CBBBCC25F8A2 /* Pods_AbdoAppTests.framework */,
 			);
@@ -573,37 +635,48 @@
 			files = (
 				CB5A307C1E7CC96E000D4EA6 /* TableViewCell.swift in Sources */,
 				CB6D5D3E1E76006400D36853 /* ChildInfo.swift in Sources */,
+				CB1873C31E91AA66009EE73F /* RouterActivity.swift in Sources */,
 				CB6D5D3C1E76006400D36853 /* ChildAllergy.swift in Sources */,
 				CB6D5D421E76006400D36853 /* Supplement.swift in Sources */,
 				CBB4AB901E81F33600C29C08 /* ViewControllerPoo.swift in Sources */,
+				CB1873BE1E91A997009EE73F /* RouterRegistration.swift in Sources */,
 				CB6D5D2F1E76000400D36853 /* NSDateExtension.swift in Sources */,
 				CBB62EB51E78446D005C9FEC /* ViewControllerAllergy.swift in Sources */,
 				CBB62EA81E7830A5005C9FEC /* CloseKeyboard.swift in Sources */,
+				CB1873C91E91AA8C009EE73F /* RouterFood.swift in Sources */,
 				CB2271A31E8834F4000B7E93 /* ViewControllerFood.swift in Sources */,
 				CB5A309C1E802787000D4EA6 /* ViewControllerCreateChild.swift in Sources */,
+				CB1873B51E91976A009EE73F /* RouterAnonymous.swift in Sources */,
 				CB22719D1E8834A3000B7E93 /* ViewControllerSleep.swift in Sources */,
 				CBB62EA01E776F8E005C9FEC /* Singleton.swift in Sources */,
 				CBB4AB8C1E81F2D700C29C08 /* ViewControllerPain.swift in Sources */,
 				CB6D5D401E76006400D36853 /* Registration.swift in Sources */,
 				CB22719F1E8834BC000B7E93 /* ViewControllerMood.swift in Sources */,
 				CBE238631E8AFB3400E78D55 /* StringExtension.swift in Sources */,
-				CB6D5D2C1E75FFDB00D36853 /* ShareCodeAPI.swift in Sources */,
+				CB1873D11E91AAC5009EE73F /* RouterSleep.swift in Sources */,
 				CB6D5D531E7600AA00D36853 /* PainLevel.swift in Sources */,
+				CB1873CD1E91AAA7009EE73F /* RouterPainLevel.swift in Sources */,
 				CB23C71B1E75FC420046E5DF /* AbdoApp.xcdatamodeld in Sources */,
 				CB6D5D471E76008000D36853 /* Allergy.swift in Sources */,
-				CB6D5D2B1E75FFDB00D36853 /* API.swift in Sources */,
 				CBB62EB71E78449E005C9FEC /* ViewControllerSupplement.swift in Sources */,
 				CBB62EBB1E787B0F005C9FEC /* ViewControllerMedicinAdd.swift in Sources */,
+				CB1873C01E91A9E5009EE73F /* RouterShareCode.swift in Sources */,
 				CBB4AB921E832CB100C29C08 /* ViewControllerRegEnd.swift in Sources */,
 				CBB4AB8E1E81F30800C29C08 /* ViewControllerOtherRegs.swift in Sources */,
+				CB1873C51E91AA73009EE73F /* RouterFeces.swift in Sources */,
 				CB6D5D4F1E7600AA00D36853 /* Activity.swift in Sources */,
+				CB1873B71E91A930009EE73F /* RouterChild.swift in Sources */,
 				CB5A71B21E8A62770005B867 /* CollectionViewCellRating.swift in Sources */,
 				CB5210861E8A879F00436582 /* CollectionViewCellStartPage.swift in Sources */,
 				CB89AC941E903AF50039C562 /* SplashScreenViewController.swift in Sources */,
+				CB1873CF1E91AAB6009EE73F /* RouterPainPlacement.swift in Sources */,
+				CB1873B91E91A944009EE73F /* RouterAllergy.swift in Sources */,
 				CBB62EA21E777744005C9FEC /* PainPlacement.swift in Sources */,
+				CB1873BB1E91A961009EE73F /* RouterSupplement.swift in Sources */,
 				CB6D5D331E76004000D36853 /* Anonymous.swift in Sources */,
 				CBB62EB11E7843C2005C9FEC /* ViewControllerSharecode.swift in Sources */,
 				CBB62EA61E777797005C9FEC /* Mood.swift in Sources */,
+				CB1873C71E91AA80009EE73F /* RouterFoodCategory.swift in Sources */,
 				CB7FD1FD1E7895DD00AFFE3D /* ColorScheme.swift in Sources */,
 				CB6D5D3F1E76006400D36853 /* ChildMedicin.swift in Sources */,
 				CB23C7131E75FC420046E5DF /* AppDelegate.swift in Sources */,
@@ -614,6 +687,7 @@
 				CBA4B3591E81D83700ECBFF5 /* ViewControllerRegStart.swift in Sources */,
 				CBB62EAD1E78427B005C9FEC /* ViewControllerMasterdata.swift in Sources */,
 				CBB62EAB1E784233005C9FEC /* ViewControllerStartpage.swift in Sources */,
+				CB1873CB1E91AA99009EE73F /* RouterMood.swift in Sources */,
 				CB7FD1FF1E79D3ED00AFFE3D /* SetupVariables.swift in Sources */,
 				CB6D5D481E76008000D36853 /* ChildSupplement.swift in Sources */,
 				CB6D5D3D1E76006400D36853 /* Child.swift in Sources */,
@@ -762,8 +836,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = DE6WJ525S8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Release-iphoneos/Alamofire",
+					"$(PROJECT_DIR)/build/Release-iphoneos/IQKeyboardManagerSwift",
+					"$(PROJECT_DIR)/build/Release-iphoneos/SwiftyJSON",
+					"$(PROJECT_DIR)/build/Release-iphoneos/SAConfettiView",
+				);
 				INFOPLIST_FILE = AbdoApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.thorstholm.AbdoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -778,8 +859,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = DE6WJ525S8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Release-iphoneos/Alamofire",
+					"$(PROJECT_DIR)/build/Release-iphoneos/IQKeyboardManagerSwift",
+					"$(PROJECT_DIR)/build/Release-iphoneos/SwiftyJSON",
+					"$(PROJECT_DIR)/build/Release-iphoneos/SAConfettiView",
+				);
 				INFOPLIST_FILE = AbdoApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.thorstholm.AbdoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
