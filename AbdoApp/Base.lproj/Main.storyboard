@@ -329,7 +329,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Allergier" id="0kf-Zl-O0f">
                         <barButtonItem key="backBarButtonItem" title="Tilbage" id="JST-Mh-KFl"/>
-                        <barButtonItem key="rightBarButtonItem" title="Gem" id="4X7-77-wYi"/>
+                        <barButtonItem key="rightBarButtonItem" title="Gem" id="4X7-77-wYi">
+                            <connections>
+                                <action selector="buttonSave:" destination="zLJ-Az-ATq" id="XSO-ev-UJz"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="backgroundView" destination="a3i-o9-Xlc" id="Ymn-Fr-PHM"/>

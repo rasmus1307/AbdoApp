@@ -4,8 +4,13 @@ class ViewControllerAllergy: UIViewController, UITableViewDataSource, UITableVie
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backgroundView: UIView!
+    @IBAction func buttonSave(_ sender: UIBarButtonItem) {
+        theChild.allergies = tempAllergies
+        _ = self.navigationController?.popViewController(animated: true)
+    }
     
     var theChild = Singleton.SharedInstance.child[Singleton.SharedInstance.currentChildId]
+    var tempAllergies = [Allergy]()
     
     var datasource : [Allergy] = Singleton.SharedInstance.allergies
     
@@ -65,7 +70,7 @@ class ViewControllerAllergy: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         let (item) = self.datasource[indexPath.row]
-        if self.theChild.allergies.contains(where: { $0.id == item.id }) {
+        if self.tempAllergies.contains(where: { $0.id == item.id }) {
             cell.accessoryType = .checkmark
         }
         cell.textLabel?.text = item.type
@@ -85,7 +90,7 @@ class ViewControllerAllergy: UIViewController, UITableViewDataSource, UITableVie
             if cell.accessoryType == .checkmark
             {
                 cell.accessoryType = .none
-                self.theChild.allergies = self.theChild.allergies.filter({$0.type != selected.type})
+                self.tempAllergies = self.tempAllergies.filter({$0.type != selected.type})
                 cell.isSelected = false
                 cell.isHighlighted = false
             }
@@ -94,7 +99,7 @@ class ViewControllerAllergy: UIViewController, UITableViewDataSource, UITableVie
             else
             {
                 cell.accessoryType = .checkmark
-                self.theChild.allergies.append(selected)
+                self.tempAllergies.append(selected)
                 cell.isSelected = false
                 cell.isHighlighted = false
             }
@@ -108,6 +113,7 @@ class ViewControllerAllergy: UIViewController, UITableViewDataSource, UITableVie
         self.tableView.dataSource = self
         self.backgroundView.backgroundColor = ColorScheme().orange
         self.tableView.backgroundColor = ColorScheme().orange
+        self.tempAllergies = (theChild.allergies.map{$0})
     }
     
 }

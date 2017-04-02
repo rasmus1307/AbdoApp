@@ -20,7 +20,7 @@ class ViewControllerStartpage: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        self.navigationItem.title = "Tilbage"
+        self.navigationItem.title = "Fortryd"
     }
     
     override func viewWillAppear(_ animated: Bool) {
